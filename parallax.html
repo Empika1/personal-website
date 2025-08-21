@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Parallax Example</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="pstyles.css">
+</head>
+
+<body>
+    <svg xmlns="deco" style="display:none;">
+        <symbol id="star" overflow="visible">
+            <path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 19.897 4.665 24 6 15.6 0 9.753l8.332-1.735z"/>
+        </symbol>
+    </svg>
+    <div class="bg1">
+        <div class="stars">
+            <svg class="star" width="30" height="30">
+                <use href="#star" />
+            </svg>
+            <svg class="star" width="24" height="24">
+                <use href="#star" />
+            </svg>
+        </div>
+    </div>
+    <div class="fg">
+        <p>test</p>
+        <div class="placeholder-content"></div>
+    </div>
+</body>
+
+</html>

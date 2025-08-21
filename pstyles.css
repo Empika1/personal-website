@@ -1,0 +1,49 @@
+:root {
+    --bg-color: #00010e;
+}
+
+html {
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    width: 100vs;
+    height: 100vh;
+    margin: 0;
+    background: var(--bg-color);
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.fg {
+    color: white;
+    position: absolute;
+    z-index: 2;
+}
+
+.bg1 {
+    transform: translateZ(-1px) scale(2);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+    padding: 24px;
+}
+
+.placeholder-content {
+    min-height: 200vh;
+}
+
+.star {
+    position: absolute;
+
+    stroke: gold;
+    stroke-width: 2;
+    stroke-linecap: square;
+    overflow: visible;
+    /*if i dont do this, stars get clipped on page zoom */
+    will-change: transform;
+}
