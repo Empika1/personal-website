@@ -1,5 +1,6 @@
 :root {
-    --bg-color: #00010e;
+    --bg-color: #00010f;
+    --base-star-color: rgb(218, 183, 31);
 }
 
 html {
@@ -18,32 +19,307 @@ body {
     overflow-y: scroll;
 }
 
-.fg {
+.content {
     color: white;
     position: absolute;
-    z-index: 2;
+    z-index: 0;
 }
 
 .bg1 {
+    background-color: blue;
+    transform: translateZ(-0.25px) scale(1.25);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+}
+
+.bg2 {
+    transform: translateZ(-0.5px) scale(1.5);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -2;
+}
+
+.bg3 {
+    transform: translateZ(-0.75px) scale(1.75);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -3;
+}
+
+.bg4 {
     transform: translateZ(-1px) scale(2);
     position: absolute;
     width: 100%;
     min-height: 100vh;
-    z-index: 1;
-    padding: 24px;
+    z-index: -4;
 }
+
+.bg5 {
+    transform: translateZ(-1.25px) scale(2.25);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -5;
+}
+
+.bg6 {
+    transform: translateZ(-1.5px) scale(2.5);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -6;
+}
+
+.bg7 {
+    transform: translateZ(-1.75px) scale(2.75);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -7;
+}
+
+.bg8 {
+    transform: translateZ(-2px) scale(3);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -8;
+}
+
+.bg9 {
+    transform: translateZ(-2.25px) scale(3.25);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -9;
+}
+
+.bg10 {
+    transform: translateZ(-2.5px) scale(3.5);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -10;
+}
+
+.bg11 {
+    transform: translateZ(-2.75px) scale(3.75);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -11;
+}
+
+.bg12 {
+    transform: translateZ(-3px) scale(4);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -12;
+}
+
+.bg13 {
+    transform: translateZ(-3.25px) scale(4.25);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -13;
+}
+
+.bg14 {
+    transform: translateZ(-3.5px) scale(4.5);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -14;
+}
+
+.bg15 {
+    transform: translateZ(-3.75px) scale(4.75);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -15;
+}
+
+.bg16 {
+    transform: translateZ(-4px) scale(5);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -16;
+}
+
+.bg17 {
+    transform: translateZ(-4.25px) scale(5.25);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -17;
+}
+
+.bg18 {
+    transform: translateZ(-4.5px) scale(5.5);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -18;
+}
+
+.bg19 {
+    transform: translateZ(-4.75px) scale(5.75);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -19;
+}
+
+.bg20 {
+    transform: translateZ(-5px) scale(6);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -20;
+}   
 
 .placeholder-content {
-    min-height: 200vh;
+    min-height: 1000vh;
 }
 
-.star {
-    position: absolute;
-
-    stroke: gold;
-    stroke-width: 2;
+.bg1-stars, .bg2-stars, .bg3-stars, .bg4-stars, .bg5-stars,
+.bg6-stars, .bg7-stars, .bg8-stars, .bg9-stars,
+.bg10-stars, .bg11-stars, .bg12-stars, .bg13-stars,
+.bg14-stars, .bg15-stars, .bg16-stars, .bg17-stars,
+.bg18-stars, .bg19-stars, .bg20-stars {
     stroke-linecap: square;
     overflow: visible;
-    /*if i dont do this, stars get clipped on page zoom */
+
+    width: 100%;
+    position: absolute;
+
     will-change: transform;
+}
+
+.bg1-stars {
+    fill: var(--bg-color);
+    stroke: gold;
+    stroke-width: 2;
+}
+
+.bg2-stars {
+    fill: var(--bg-color);
+    stroke: gold;
+    stroke-width: 2;
+}
+
+.bg3-stars {
+    fill: var(--bg-color);
+    stroke: gold;
+    stroke-width: 2;
+}
+
+.bg4-stars {
+    fill: var(--bg-color);
+    stroke: gold;
+    stroke-width: 2;
+}
+
+.bg5-stars {
+    fill: var(--bg-color);
+    stroke: gold;
+    stroke-width: 2;
+}
+
+.bg6-stars {
+    fill: var(--bg-color);
+    stroke: gold;
+    stroke-width: 2;
+}
+
+.bg7-stars {
+    fill: var(--bg-color);
+    stroke: gold;
+    stroke-width: 2;
+}
+
+.bg8-stars {
+    fill: var(--bg-color);
+    stroke: gold;
+    stroke-width: 2;
+}
+
+.bg9-stars {
+    fill: var(--bg-color);
+    stroke: gold;
+    stroke-width: 2;
+}
+
+.bg10-stars {
+    fill: var(--bg-color);
+    stroke: gold;
+    stroke-width: 2;
+}
+
+.bg11-stars {
+    fill: var(--bg-color);
+    stroke: gold;
+    stroke-width: 2;
+}
+
+.bg12-stars {
+    fill: var(--bg-color);
+    stroke: gold;
+    stroke-width: 2;
+}
+
+.bg13-stars {
+    fill: var(--bg-color);
+    stroke: gold;
+    stroke-width: 2;
+}
+
+.bg14-stars {
+    fill: var(--bg-color);
+    stroke: gold;
+    stroke-width: 2;
+}
+
+.bg15-stars {
+    fill: var(--bg-color);
+    stroke: var(--base-star-color);
+    stroke-width: 2;
+}
+
+.bg16-stars {
+    fill: var(--bg-color);
+    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color) 15%);
+    stroke-width: 2;
+}
+
+.bg17-stars {
+    fill: var(--bg-color);
+    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color) 30%);
+    stroke-width: 2;
+}
+
+.bg18-stars {
+    fill: var(--bg-color);
+    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color) 45%);
+    stroke-width: 2;
+}
+
+.bg19-stars {
+   fill: var(--bg-color);
+    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color) 60%);
+    stroke-width: 2;
+}
+
+.bg20-stars {
+    fill: var(--bg-color);
+    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color) 75%);
+    stroke-width: 2;
 }
