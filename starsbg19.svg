@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1920">
+    <symbol id="star" viewBox="0 0 24 24">
+        <path d="M12 2l3 7h7l-6 4 2 7-6-4-6 4 2-7-6-4h7z"/>
+    </symbol>
+    <style>
+        use { fill: gold; }
+    </style>
+    <use href="#star" x="65" y="1219" width="9" height="9" transform="rotate(7deg 69 1223)" />
+    <use href="#star" x="1741" y="1128" width="9" height="9" transform="rotate(218deg 1745 1132)" />
+    <use href="#star" x="305" y="1651" width="8" height="8" transform="rotate(45deg 309 1655)" />
+    <use href="#star" x="1530" y="1591" width="11" height="11" transform="rotate(170deg 1535 1596)" />
+    <use href="#star" x="1849" y="1599" width="12" height="12" transform="rotate(159deg 1855 1605)" />
+    <use href="#star" x="793" y="0" width="12" height="12" transform="rotate(149deg 799 6)" />
+    <use href="#star" x="995" y="515" width="8" height="8" transform="rotate(127deg 999 519)" />
+    <use href="#star" x="411" y="1271" width="12" height="12" transform="rotate(308deg 417 1277)" />
+    <use href="#star" x="1854" y="484" width="11" height="11" transform="rotate(349deg 1859 489)" />
+    <use href="#star" x="1546" y="1070" width="10" height="10" transform="rotate(326deg 1551 1075)" />
+    <use href="#star" x="147" y="279" width="8" height="8" transform="rotate(80deg 151 283)" />
+    <use href="#star" x="1193" y="1211" width="12" height="12" transform="rotate(142deg 1199 1217)" />
+    <use href="#star" x="234" y="1785" width="9" height="9" transform="rotate(288deg 238 1789)" />
+    <use href="#star" x="1099" y="1432" width="12" height="12" transform="rotate(148deg 1105 1438)" />
+    <use href="#star" x="969" y="953" width="9" height="9" transform="rotate(161deg 973 957)" />
+    <use href="#star" x="19" y="1783" width="11" height="11" transform="rotate(166deg 24 1788)" />
+    <use href="#star" x="1672" y="1234" width="9" height="9" transform="rotate(39deg 1676 1238)" />
+    <use href="#star" x="428" y="763" width="10" height="10" transform="rotate(90deg 433 768)" />
+    <use href="#star" x="1530" y="1031" width="9" height="9" transform="rotate(204deg 1534 1035)" />
+    <use href="#star" x="1865" y="1471" width="9" height="9" transform="rotate(90deg 1869 1475)" />
+    <use href="#star" x="345" y="848" width="11" height="11" transform="rotate(54deg 350 853)" />
+    <use href="#star" x="1083" y="230" width="10" height="10" transform="rotate(59deg 1088 235)" />
+    <use href="#star" x="1404" y="110" width="10" height="10" transform="rotate(187deg 1409 115)" />
+    <use href="#star" x="981" y="177" width="12" height="12" transform="rotate(64deg 987 183)" />
+    <use href="#star" x="1483" y="1766" width="12" height="12" transform="rotate(288deg 1489 1772)" />
+    <use href="#star" x="547" y="404" width="9" height="9" transform="rotate(55deg 551 408)" />
+    <use href="#star" x="199" y="741" width="11" height="11" transform="rotate(281deg 204 746)" />
+    <use href="#star" x="1336" y="503" width="8" height="8" transform="rotate(247deg 1340 507)" />
+    <use href="#star" x="1243" y="1126" width="11" height="11" transform="rotate(44deg 1248 1131)" />
+    <use href="#star" x="971" y="646" width="11" height="11" transform="rotate(189deg 976 651)" />
+    <use href="#star" x="1751" y="804" width="8" height="8" transform="rotate(116deg 1755 808)" />
+    <use href="#star" x="1500" y="770" width="8" height="8" transform="rotate(359deg 1504 774)" />
+    <use href="#star" x="1373" y="1329" width="9" height="9" transform="rotate(102deg 1377 1333)" />
+</svg>

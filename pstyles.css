@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    width: 100vs;
+    width: 100vw; /* fixed typo: 100vs -> 100vw */
     height: 100vh;
     margin: 0;
     background: var(--bg-color);
@@ -195,131 +195,48 @@ body {
 .bg10-stars, .bg11-stars, .bg12-stars, .bg13-stars,
 .bg14-stars, .bg15-stars, .bg16-stars, .bg17-stars,
 .bg18-stars, .bg19-stars, .bg20-stars {
-    stroke-linecap: square;
-    overflow: visible;
-
-    width: 100%;
     position: absolute;
+    left: 0px;
+    right: 0px;
+    min-height: 100vh; /* ensure vertical repeat area */
+    z-index: -15;
 
-    will-change: transform;
-}
-
-.bg1-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg2-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg3-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg4-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg5-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg6-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg7-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg8-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg9-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg10-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg11-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg12-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg13-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg14-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
+    /* star background: keep tile constant in px so resizing horizontally won't change tile size */
+    background-repeat: repeat;
+    background-size: 1920px 1920px; /* reduced from 1920 to lower GPU memory pressure */
+    background-position: center top;
+    background-attachment: scroll;
 }
 
 .bg15-stars {
-    fill: var(--bg-color);
-    stroke: var(--base-star-color);
-    stroke-width: 2;
+    background-image: url('starsbg15.svg');
 }
 
 .bg16-stars {
-    fill: var(--bg-color);
-    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color) 15%);
-    stroke-width: 2;
+    background-image: url('starsbg16.svg');
 }
 
 .bg17-stars {
-    fill: var(--bg-color);
-    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color) 30%);
-    stroke-width: 2;
+    background-image: url('starsbg17.svg');
 }
 
 .bg18-stars {
-    fill: var(--bg-color);
-    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color) 45%);
-    stroke-width: 2;
+    background-image: url('starsbg18.svg');
 }
 
 .bg19-stars {
-   fill: var(--bg-color);
-    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color) 60%);
-    stroke-width: 2;
+    background-image: url('starsbg19.svg');
 }
 
 .bg20-stars {
-    fill: var(--bg-color);
-    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color) 75%);
-    stroke-width: 2;
+    background-image: url('starsbg20.svg');
+}
+
+/* New: compositor-friendly hints for the parallax layers (select direct body children that start with "bg") */
+body > div[class^="bg"] {
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    pointer-events: none; /* prevent accidental hit-testing on background layers */
+    transform-style: preserve-3d;
 }
