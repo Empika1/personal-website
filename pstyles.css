@@ -1,6 +1,9 @@
 :root {
     --bg-color: #00010f;
+    --bg-color-star-blend: #0a000f;
     --base-star-color: rgb(218, 183, 31);
+
+    --content-width: min(calc(100% - 10ch), 100ch);
 }
 
 html {
@@ -20,8 +23,11 @@ body {
 }
 
 .content {
+    background-color: transparent;
     color: white;
-    position: absolute;
+    position: relative;
+    width: var(--content-width);
+    margin: 0 auto;
     z-index: 0;
 }
 
@@ -296,30 +302,30 @@ body {
 
 .bg16-stars {
     fill: var(--bg-color);
-    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color) 15%);
+    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color-star-blend) 15%);
     stroke-width: 2;
 }
 
 .bg17-stars {
     fill: var(--bg-color);
-    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color) 30%);
+    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color-star-blend) 30%);
     stroke-width: 2;
 }
 
 .bg18-stars {
     fill: var(--bg-color);
-    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color) 45%);
+    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color-star-blend) 45%);
     stroke-width: 2;
 }
 
 .bg19-stars {
-   fill: var(--bg-color);
-    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color) 60%);
+    fill: color-mix(in oklab, var(--base-star-color), var(--bg-color-star-blend) 60%);
+    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color-star-blend) 60%);
     stroke-width: 2;
 }
 
 .bg20-stars {
-    fill: var(--bg-color);
-    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color) 75%);
+    fill: color-mix(in oklab, var(--base-star-color), var(--bg-color-star-blend) 75%);
+    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color-star-blend) 75%);
     stroke-width: 2;
 }
