@@ -1,17 +1,17 @@
 import random
 
-numLayers = 6
-bgLayerStart = 15
+numLayers = 3
+bgLayerStart = 18
 bgLayerDiff = 1
-bgStarLayerStart = 15
+bgStarLayerStart = 18
 bgStarLayerDiff = 1
 
-numStarsPerLayer = 25
-numStarsDiff = 2
-minSizePerLayer = 20
-minSizeDiff = -3
-maxSizePerLayer = 28
-maxSizeDiff = -4
+numStarsPerLayer = 65
+numStarsDiff = 25
+minSizePerLayer = 18
+minSizeDiff = -5
+maxSizePerLayer = 30
+maxSizeDiff = -7
 minPadding = 10
 minPaddingDiff = 0
 
@@ -50,8 +50,8 @@ while layer < numLayers:
             i += 1
 
     for star in stars:
-        print(f'<use href="#star" x={star[0]}px y={star[1]}px width={star[2]}px height={star[2]}px ' +
-            f'style="transform-origin: {star[0] + star[2] // 2}px {star[1] + star[2] // 2}px; transform: rotate({star[3]}deg);"/>')
+        print(f'<use xlink:href="#star" x="{star[0]}" y="{star[1]}" width="{star[2]}" height="{star[2]}" ' +
+            f'transform="rotate({star[3]} {star[0] + star[2] // 2} {star[1] + star[2] // 2})"/>')
 
     print("</svg>")
     print("</div>")

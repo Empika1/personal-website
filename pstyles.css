@@ -1,7 +1,8 @@
 :root {
     --bg-color: #00010f;
     --bg-color-star-blend: #0a000f;
-    --base-star-color: rgb(218, 183, 31);
+    --base-star-color: rgb(192, 162, 28);
+    --base-moon-color: #fff8da;
 
     --content-width: min(calc(100% - 10ch), 100ch);
 }
@@ -32,7 +33,6 @@ body {
 }
 
 .bg1 {
-    background-color: blue;
     transform: translateZ(-0.25px) scale(1.25);
     position: absolute;
     width: 100%;
@@ -190,17 +190,32 @@ body {
     width: 100%;
     min-height: 100vh;
     z-index: -20;
-}   
+}
 
 .placeholder-content {
     min-height: 1000vh;
 }
 
-.bg1-stars, .bg2-stars, .bg3-stars, .bg4-stars, .bg5-stars,
-.bg6-stars, .bg7-stars, .bg8-stars, .bg9-stars,
-.bg10-stars, .bg11-stars, .bg12-stars, .bg13-stars,
-.bg14-stars, .bg15-stars, .bg16-stars, .bg17-stars,
-.bg18-stars, .bg19-stars, .bg20-stars {
+.bg1-stars,
+.bg2-stars,
+.bg3-stars,
+.bg4-stars,
+.bg5-stars,
+.bg6-stars,
+.bg7-stars,
+.bg8-stars,
+.bg9-stars,
+.bg10-stars,
+.bg11-stars,
+.bg12-stars,
+.bg13-stars,
+.bg14-stars,
+.bg15-stars,
+.bg16-stars,
+.bg17-stars,
+.bg18-stars,
+.bg19-stars,
+.bg20-stars {
     stroke-linecap: square;
     overflow: visible;
 
@@ -210,122 +225,36 @@ body {
     will-change: transform;
 }
 
-.bg1-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
+.moon {
+    stroke-linecap: square;      /* affects open path ends */
+    stroke-linejoin: miter;
+    stroke-miterlimit: 10;
+    overflow: visible;
 
-.bg2-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
+    width: 100%;
+    position: absolute;
 
-.bg3-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
+    will-change: transform;
 
-.bg4-stars {
     fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg5-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg6-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg7-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg8-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg9-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg10-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg11-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg12-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg13-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg14-stars {
-    fill: var(--bg-color);
-    stroke: gold;
-    stroke-width: 2;
-}
-
-.bg15-stars {
-    fill: var(--bg-color);
-    stroke: var(--base-star-color);
-    stroke-width: 2;
-}
-
-.bg16-stars {
-    fill: var(--bg-color);
-    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color-star-blend) 15%);
-    stroke-width: 2;
-}
-
-.bg17-stars {
-    fill: var(--bg-color);
-    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color-star-blend) 30%);
-    stroke-width: 2;
+    stroke: var(--base-moon-color);
+    stroke-width: 5;
 }
 
 .bg18-stars {
     fill: var(--bg-color);
-    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color-star-blend) 45%);
+    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color-star-blend) 0%);
     stroke-width: 2;
 }
 
 .bg19-stars {
-    fill: color-mix(in oklab, var(--base-star-color), var(--bg-color-star-blend) 60%);
-    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color-star-blend) 60%);
+    fill: var(--bg-color);
+    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color-star-blend) 40%);
     stroke-width: 2;
 }
 
 .bg20-stars {
-    fill: color-mix(in oklab, var(--base-star-color), var(--bg-color-star-blend) 75%);
-    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color-star-blend) 75%);
+    fill: var(--bg-color);
+    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color-star-blend) 80%);
     stroke-width: 2;
 }
