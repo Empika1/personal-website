@@ -2,7 +2,7 @@
     --bg-color: #00010f;
     --bg-color-star-blend: #0a000f;
     --base-star-color: rgb(192, 162, 28);
-    --base-moon-color: #fff8da;
+    --base-moon-color: #f5e9b4;
 
     --content-width: min(calc(100% - 10ch), 100ch);
 }
@@ -236,9 +236,9 @@ body {
 
     will-change: transform;
 
-    fill: var(--bg-color);
+    fill: color-mix(in oklab, var(--base-moon-color), var(--bg-color) 92%);
     stroke: var(--base-moon-color);
-    stroke-width: 5;
+    stroke-width: 3.5;
 }
 
 .bg18-stars {
