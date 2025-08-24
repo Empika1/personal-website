@@ -1,10 +1,8 @@
 :root {
     --bg-color: #00010f;
-    --bg-color-star-blend: #0a000f;
-    --base-star-color: rgb(192, 162, 28);
-    --base-moon-color: #f5e9b4;
 
     --content-width: min(calc(100% - 10ch), 100ch);
+    --content-clouds-allowed-overlap: -2ch;
 }
 
 html {
@@ -32,9 +30,54 @@ body {
     z-index: 0;
 }
 
-.bg1, .bg2, .bg3, .bg4, .bg5, .bg6, .bg7, .bg8, .bg9, .bg10,
-.bg11, .bg12, .bg13, .bg14, .bg15, .bg16, .bg17, .bg18, .bg19, .bg20 {
+.fg1,
+.fg2,
+.fg3,
+.bg1,
+.bg2,
+.bg3,
+.bg4,
+.bg5,
+.bg6,
+.bg7,
+.bg8,
+.bg9,
+.bg10,
+.bg11,
+.bg12,
+.bg13,
+.bg14,
+.bg15,
+.bg16,
+.bg17,
+.bg18,
+.bg19,
+.bg20 {
     pointer-events: none;
+}
+
+.fg1 {
+    transform: translateZ(0.25px) scale(0.75);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+}
+
+.fg2 {
+    transform: translateZ(0.5px) scale(0.5);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+}
+
+.fg3 {
+    transform: translateZ(0.75px) scale(0.25);
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -1;
 }
 
 .bg1 {
@@ -229,16 +272,6 @@ body {
     background-position: top center;
 }
 
-.moon {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-size: 170px 170px;
-    background-repeat: no-repeat;
-    background-position: top 100px right 150px;
-    background-image: url('moon.webp');
-}
-
 .bg18-stars {
     background-image: url('stars1.webp');
 }
@@ -249,4 +282,62 @@ body {
 
 .bg20-stars {
     background-image: url('stars3.webp');
+}
+
+.moon {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-size: 170px;
+    background-repeat: no-repeat;
+    background-position: top 100px right 15%;
+    background-image: url('moon.webp');
+}
+
+.fg1-clouds-left {
+    position: absolute;
+    top: 100vh;
+    left: min(0px, calc(50% - 317px + var(--content-clouds-allowed-overlap) - var(--content-width) * 0.5));
+    /* make the clouds shift to the left if they would overlap content */
+    width: 100%;
+    height: 1000vh;
+    background-size: 634px 1390px;
+    background-repeat: repeat-y;
+    background-position: top left -317px;
+    background-image: url('cloudsfgleft.webp');
+}
+
+.fg1-clouds-right {
+    position: absolute;
+    top: 100vh;
+    right: min(0px, calc(50% - 264px + var(--content-clouds-allowed-overlap) - var(--content-width) * 0.5));
+    /* make the clouds shift to the left if they would overlap content */
+    width: 100%;
+    height: 1000vh;
+    background-size: 527px 1350px;
+    background-repeat: repeat-y;
+    background-position: top right -264px;
+    background-image: url('cloudsfgright.webp');
+}
+
+.bg2-clouds {
+    position: absolute;
+    top: 100vh;
+    width: 100%;
+    height: 1000vh;
+    background-size: 1674px 1681px;
+    background-repeat: repeat;
+    background-position: top center;
+    background-image: url('cloudsbg1.webp');
+}
+
+.bg4-clouds {
+    position: absolute;
+    top: 100vh;
+    width: 100%;
+    height: 1000vh;
+    background-size: 1069px 1477px;
+    background-repeat: repeat;
+    background-position: top center;
+    background-image: url('cloudsbg2.webp')
 }
