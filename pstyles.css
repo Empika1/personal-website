@@ -221,15 +221,12 @@ body {
 .bg18-stars,
 .bg19-stars,
 .bg20-stars {
-    stroke-linecap: square;
-    overflow: visible;
-
     position: absolute;
     width: 100%;
-    transform: translateX(calc(50% - 960px));
-    /*-(1920px - 50%) / 2 to center the stars on the screen*/
-
-    will-change: contents transform;
+    height: 1000vh;
+    background-size: 1920px 1080px;
+    background-repeat: repeat;
+    background-position: top center;
 }
 
 .moon {
@@ -251,19 +248,13 @@ body {
 }
 
 .bg18-stars {
-    fill: var(--bg-color);
-    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color-star-blend) 0%);
-    stroke-width: 2;
+    background-image: url('stars1.webp');
 }
 
 .bg19-stars {
-    fill: var(--bg-color);
-    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color-star-blend) 40%);
-    stroke-width: 2;
+    background-image: url('stars2.webp');
 }
 
 .bg20-stars {
-    fill: var(--bg-color);
-    stroke: color-mix(in oklab, var(--base-star-color), var(--bg-color-star-blend) 80%);
-    stroke-width: 2;
+    background-image: url('stars3.webp');
 }
