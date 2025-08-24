@@ -230,21 +230,13 @@ body {
 }
 
 .moon {
-    stroke-linecap: square;
-    stroke-linejoin: miter;
-    stroke-miterlimit: 10;
-    overflow: visible;
-
     position: absolute;
     width: 100%;
-    transform: translateX(calc(75% - 50px));
-    /*position relative to the right side of the screen*/
-
-    will-change: contents transform;
-
-    fill: color-mix(in oklab, var(--base-moon-color), var(--bg-color) 92%);
-    stroke: var(--base-moon-color);
-    stroke-width: 3.5;
+    height: 100vh;
+    background-size: 170px 170px;
+    background-repeat: no-repeat;
+    background-position: top 100px right 150px;
+    background-image: url('moon.webp');
 }
 
 .bg18-stars {
