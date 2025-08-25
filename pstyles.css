@@ -61,7 +61,7 @@ body {
     position: absolute;
     width: 100%;
     min-height: 100vh;
-    z-index: -1;
+    z-index: 1;
 }
 
 .fg2 {
@@ -69,7 +69,7 @@ body {
     position: absolute;
     width: 100%;
     min-height: 100vh;
-    z-index: -1;
+    z-index: 2;
 }
 
 .fg3 {
@@ -77,7 +77,7 @@ body {
     position: absolute;
     width: 100%;
     min-height: 100vh;
-    z-index: -1;
+    z-index: 3;
 }
 
 .bg1 {
@@ -288,56 +288,148 @@ body {
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-size: 170px;
+    background-size: 170px 170px;
     background-repeat: no-repeat;
-    background-position: top 100px right 15%;
+    background-position: top 200px right 15%;
     background-image: url('moon.webp');
 }
 
 .fg1-clouds-left {
+    --sizex: 634px;
+    --sizey: 1390px;
     position: absolute;
     top: 100vh;
-    left: min(0px, calc(50% - 317px + var(--content-clouds-allowed-overlap) - var(--content-width) * 0.5));
+    left: min(0px, calc(50% - var(--sizex) * 0.5 + var(--content-clouds-allowed-overlap) - var(--content-width) * 0.5));
     /* make the clouds shift to the left if they would overlap content */
     width: 100%;
-    height: 1000vh;
-    background-size: 634px 1390px;
+    height: calc(var(--sizey) * 7);
+    background-size: var(--sizex) var(--sizey);
     background-repeat: repeat-y;
-    background-position: top left -317px;
+    background-position: top left calc(var(--sizex) * -0.5);
     background-image: url('cloudsfgleft.webp');
 }
 
 .fg1-clouds-right {
+    --sizex: 527px;
+    --sizey: 1350px;
     position: absolute;
     top: 100vh;
-    right: min(0px, calc(50% - 264px + var(--content-clouds-allowed-overlap) - var(--content-width) * 0.5));
+    right: min(0px, calc(50% - var(--sizex) * 0.5 + var(--content-clouds-allowed-overlap) - var(--content-width) * 0.5));
     /* make the clouds shift to the left if they would overlap content */
     width: 100%;
-    height: 1000vh;
-    background-size: 527px 1350px;
+    height: calc(var(--sizey) * 7);
+    background-size: var(--sizex) var(--sizey);
     background-repeat: repeat-y;
-    background-position: top right -264px;
+    background-position: top right calc(var(--sizex) * -0.5);
     background-image: url('cloudsfgright.webp');
 }
 
 .bg2-clouds {
+    --sizex: 1674px;
+    --sizey: 1681px;
     position: absolute;
     top: 100vh;
     width: 100%;
-    height: 1000vh;
-    background-size: 1674px 1681px;
+    height: calc(var(--sizey) * 3);
+    background-size: var(--sizex) var(--sizey);
     background-repeat: repeat;
     background-position: top center;
     background-image: url('cloudsbg1.webp');
 }
 
 .bg4-clouds {
+    --sizex: 1069px;
+    --sizey: 1477px;
     position: absolute;
     top: 100vh;
     width: 100%;
-    height: 1000vh;
-    background-size: 1069px 1477px;
+    height: calc(var(--sizey) * 3);
+    background-size: var(--sizex) var(--sizey);
     background-repeat: repeat;
     background-position: top center;
     background-image: url('cloudsbg2.webp')
+}
+
+.fg3-wave {
+    --sizex: 726px;
+    --sizey: 91px;
+    position: absolute;
+    top: 4710.5vh;
+    width: 100%;
+    height: var(--sizey);
+    background-size: var(--sizex) var(--sizey);
+    background-repeat: repeat-x;
+    background-position: top center;
+    background-image: url('wavefg2.webp')
+}
+
+.fg3-water {
+    position: absolute;
+    top: calc(4710.5vh + 91px);
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-color);
+}
+
+.fg1-wave {
+    --sizex: 240px;
+    --sizey: 33px;
+    position: absolute;
+    top: 1602.5vh;
+    width: 100%;
+    height: var(--sizey);
+    background-size: var(--sizex) var(--sizey);
+    background-repeat: repeat-x;
+    background-position: top center;
+    background-image: url('wavefg1.webp')
+}
+
+.fg1-water {
+    position: absolute;
+    top: calc(1602.5vh + 33px);
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-color);
+}
+
+.bg1-wave {
+    --sizex: 144px;
+    --sizey: 22px;
+    position: absolute;
+    top: 980.5vh;
+    width: 100%;
+    height: var(--sizey);
+    background-size: var(--sizex) var(--sizey);
+    background-repeat: repeat-x;
+    background-position: top center;
+    background-image: url('wavebg1.webp')
+}
+
+.bg1-water {
+    position: absolute;
+    top: calc(980.5vh + 22px);
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-color);
+}
+
+.bg3-wave {
+    --sizex: 102px;
+    --sizey: 17px;
+    position: absolute;
+    top: 714.286vh;
+    width: 100%;
+    height: var(--sizey);
+    background-size: var(--sizex) var(--sizey);
+    background-repeat: repeat-x;
+    background-position: top center;
+    background-image: url('wavebg2.webp')
+}
+
+.bg3-water {
+    position: absolute;
+    top: calc(714.286vh + 17px);
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-color);
 }
