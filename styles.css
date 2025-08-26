@@ -105,6 +105,7 @@ h2.subtitle {
     transition: transform 80ms ease, color 80ms ease, background-color 80ms ease;
 }
 
+/* TODO: download icons as svg and use those instead of font awesome */
 .social-icons a.fa:hover {
     /* transform: translateY(-2px); */
     background-color: var(--fg-accent-color);
@@ -116,6 +117,25 @@ h2.subtitle {
     background-color: white;
     color: var(--fg-accent-color);
     outline: none;
+}
+
+.section-header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1.section-header {
+    display: inline-block;
+    width: auto;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.1;
+    color: var(--fg-accent-color);
+    text-align: center;
+    background-color: var(--bg-color);
+    border-radius: 24px;
 }
 
 .box {
