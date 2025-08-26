@@ -1,4 +1,20 @@
 :root {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+
+    --fg-accent-color: #ff9ef2;
+    --subtitle-color: #888888;
+    --social-icons-color: #8dd5e7;
+
+    --box-border-size: 2px;
+    --box-border-color: var(--fg-accent-color);
+    --box-background-color: black;
+    --box-padding-x: 2ch;
+    --box-padding-y: 1em;
+
+    --diamond-decal-size: 24px;
+    --diamond-decal-color: var(--fg-accent-color);
+
     --content-width: min(calc(100% - 20ch), 100ch);
     --content-clouds-allowed-overlap: 2ch;
     --content-height: 5000px;
@@ -35,7 +51,115 @@ body {
     position: relative;
     width: var(--content-width);
     margin: 0 auto;
-    z-index: 100;
+    z-index: 0;
+}
+
+.title-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1.title {
+    font-size: 96px;
+    font-weight: bold;
+    line-height: 1.1;
+    color: var(--fg-accent-color);
+    text-align: center;
+    background-color: var(--bg-color);
+    border-radius: 48px;
+}
+
+h2.subtitle {
+    font-size: 24px;
+    font-style: italic;
+    line-height: 1.1;
+    color: var(--subtitle-color);
+    text-align: center;
+    background-color: var(--bg-color);
+    border-radius: 12px;
+}
+
+.social-icons {
+    padding-top: 10px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-color);
+    border-radius: 12px;
+}
+
+.social-icons a.fa {
+    color: var(--bg-color);
+    background-color: var(--social-icons-color);
+    font-size: 30px;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: transform 80ms ease, color 80ms ease, background-color 80ms ease;
+}
+
+.social-icons a.fa:hover {
+    /* transform: translateY(-2px); */
+    background-color: var(--fg-accent-color);
+    outline: none;
+}
+
+.social-icons a.fa:active {
+    /* transform: translateY(-4px); */
+    background-color: white;
+    color: var(--fg-accent-color);
+    outline: none;
+}
+
+.box {
+    background-color: var(--box-background-color);
+    border: var(--box-border-size) solid var(--box-border-color);
+    padding-left: var(--box-padding-x);
+    padding-right: var(--box-padding-x);
+    padding-top: var(--box-padding-y);
+    padding-bottom: var(--box-padding-y);
+    width: var(--page-width);
+    margin: 0 auto;
+    position: relative;
+}
+
+.diamond-decal-tl,
+.diamond-decal-tr,
+.diamond-decal-bl,
+.diamond-decal-br {
+    position: absolute;
+    width: var(--diamond-decal-size);
+    height: var(--diamond-decal-size);
+    background: var(--diamond-decal-color);
+    clip-path: polygon(0% 50%, 33.33333% 33.33333%, 50% 0%, 66.66667% 33.33333%, 100% 50%,
+            66.66667% 66.66667%, 50% 100%, 33.33333% 66.66667%);
+}
+
+.diamond-decal-tl {
+    top: calc(-0.5 * (var(--diamond-decal-size) + var(--box-border-size)));
+    left: calc(-0.5 * (var(--diamond-decal-size) + var(--box-border-size)));
+}
+
+.diamond-decal-tr {
+    top: calc(-0.5 * (var(--diamond-decal-size) + var(--box-border-size)));
+    right: calc(-0.5 * (var(--diamond-decal-size) + var(--box-border-size)));
+}
+
+.diamond-decal-bl {
+    bottom: calc(-0.5 * (var(--diamond-decal-size) + var(--box-border-size)));
+    left: calc(-0.5 * (var(--diamond-decal-size) + var(--box-border-size)));
+}
+
+.diamond-decal-br {
+    bottom: calc(-0.5 * (var(--diamond-decal-size) + var(--box-border-size)));
+    right: calc(-0.5 * (var(--diamond-decal-size) + var(--box-border-size)));
 }
 
 .ruler {
@@ -302,10 +426,10 @@ body {
 .moon {
     position: absolute;
     width: 100%;
-    height: 370px;
+    height: 100vh;
     background-size: 170px 170px;
     background-repeat: no-repeat;
-    background-position: top 200px right 15%;
+    background-position: top max(30px, min(200px, calc(100vh - 200px))) right 15%;
     background-image: url('moon.webp');
 }
 
