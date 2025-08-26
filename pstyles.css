@@ -15,8 +15,8 @@
     --diamond-decal-size: 24px;
     --diamond-decal-color: var(--fg-accent-color);
 
-    --content-width: min(calc(100% - 20ch), 100ch);
-    --content-clouds-allowed-overlap: 2ch;
+    --content-width: min(calc(100% - 6ch), 100ch);
+    --content-clouds-allowed-overlap: 1.5ch;
     --content-height: 5000px;
 
     --bg-color: #00010f;
@@ -438,7 +438,7 @@ h2.subtitle {
     --sizey: 1390px;
     position: absolute;
     top: 100vh;
-    left: min(0px, calc(50% - var(--sizex) * 0.5 - var(--content-clouds-allowed-overlap) - var(--content-width) * 0.5));
+    left: min(0px, calc(50% - var(--sizex) * 0.5 + var(--content-clouds-allowed-overlap) - var(--content-width) * 0.5));
     /* make the clouds shift to the left if they would overlap content */
     width: 100%;
     height: round(down, calc((var(--page-height) - 100vh) / 0.75 - var(--wave-screen-bottom-offset) - var(--wave-cloud-min-spacing)), var(--sizey));
@@ -453,7 +453,7 @@ h2.subtitle {
     --sizey: 1350px;
     position: absolute;
     top: 100vh;
-    right: min(0px, calc(50% - var(--sizex) * 0.5 - var(--content-clouds-allowed-overlap) - var(--content-width) * 0.5));
+    right: min(0px, calc(50% - var(--sizex) * 0.5 + var(--content-clouds-allowed-overlap) - var(--content-width) * 0.5));
     /* make the clouds shift to the left if they would overlap content */
     width: 100%;
     height: round(down, calc((var(--page-height) - 100vh) / 0.75 - var(--wave-screen-bottom-offset) - var(--wave-cloud-min-spacing)), var(--sizey));
