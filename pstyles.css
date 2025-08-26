@@ -1,8 +1,14 @@
 :root {
-    --bg-color: #00010f;
-
     --content-width: min(calc(100% - 10ch), 100ch);
-    --content-clouds-allowed-overlap: -2ch;
+    --content-clouds-allowed-overlap: 2ch;
+    --content-height: 5000px;
+
+    --bg-color: #00010f;
+    --wave-screen-bottom-offset: 25vh;
+    --wave-cloud-spacing: 25vh;
+    --wave-content-spacing: 5em;
+
+    --page-height: calc(var(--content-height) + var(--wave-screen-bottom-offset) + var(--wave-content-spacing));
 }
 
 html {
@@ -27,7 +33,16 @@ body {
     position: relative;
     width: var(--content-width);
     margin: 0 auto;
-    z-index: 0;
+    z-index: 100;
+}
+
+.ruler {
+    height: var(--content-height);
+    border-left: 1px solid red;
+    background-image: linear-gradient(90deg, rgb(255, 0, 0) 50%, transparent 50%), linear-gradient(rgb(255, 0, 0) 50%, transparent 50%);
+    background-size: 1ch 1.2em;
+    background-position: left top;
+    background-repeat: repeat-y;
 }
 
 .fg1,
@@ -240,10 +255,6 @@ body {
     z-index: -20;
 }
 
-.placeholder-content {
-    min-height: 1000vh;
-}
-
 .bg1-stars,
 .bg2-stars,
 .bg3-stars,
@@ -266,28 +277,30 @@ body {
 .bg20-stars {
     position: absolute;
     width: 100%;
-    height: 1000vh;
     background-size: 1920px 1080px;
     background-repeat: repeat;
     background-position: top center;
 }
 
 .bg18-stars {
+    height: calc((var(--content-height) - 100vh) / 5.5 + 100vh);
     background-image: url('stars1.webp');
 }
 
 .bg19-stars {
+    height: calc((var(--content-height) - 100vh) / 5.75 + 100vh);
     background-image: url('stars2.webp');
 }
 
 .bg20-stars {
+    height: calc((var(--content-height) - 100vh) / 6 + 100vh);
     background-image: url('stars3.webp');
 }
 
 .moon {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 370px;
     background-size: 170px 170px;
     background-repeat: no-repeat;
     background-position: top 200px right 15%;
@@ -299,10 +312,10 @@ body {
     --sizey: 1390px;
     position: absolute;
     top: 100vh;
-    left: min(0px, calc(50% - var(--sizex) * 0.5 + var(--content-clouds-allowed-overlap) - var(--content-width) * 0.5));
+    left: min(0px, calc(50% - var(--sizex) * 0.5 - var(--content-clouds-allowed-overlap) - var(--content-width) * 0.5));
     /* make the clouds shift to the left if they would overlap content */
     width: 100%;
-    height: calc(var(--sizey) * 7);
+    height: round(down, calc((var(--content-height) - 100vh) / 0.75 - var(--wave-screen-bottom-offset) - var(--wave-cloud-spacing)), var(--sizey));
     background-size: var(--sizex) var(--sizey);
     background-repeat: repeat-y;
     background-position: top left calc(var(--sizex) * -0.5);
@@ -314,10 +327,10 @@ body {
     --sizey: 1350px;
     position: absolute;
     top: 100vh;
-    right: min(0px, calc(50% - var(--sizex) * 0.5 + var(--content-clouds-allowed-overlap) - var(--content-width) * 0.5));
+    right: min(0px, calc(50% - var(--sizex) * 0.5 - var(--content-clouds-allowed-overlap) - var(--content-width) * 0.5));
     /* make the clouds shift to the left if they would overlap content */
     width: 100%;
-    height: calc(var(--sizey) * 7);
+    height: round(down, calc((var(--content-height) - 100vh) / 0.75 - var(--wave-screen-bottom-offset) - var(--wave-cloud-spacing)), var(--sizey));
     background-size: var(--sizex) var(--sizey);
     background-repeat: repeat-y;
     background-position: top right calc(var(--sizex) * -0.5);
@@ -330,7 +343,7 @@ body {
     position: absolute;
     top: 100vh;
     width: 100%;
-    height: calc(var(--sizey) * 3);
+    height: round(down, calc((var(--content-height) - 100vh) / 1.5 - var(--wave-screen-bottom-offset) - var(--wave-cloud-spacing)), var(--sizey));
     background-size: var(--sizex) var(--sizey);
     background-repeat: repeat;
     background-position: top center;
@@ -343,7 +356,7 @@ body {
     position: absolute;
     top: 100vh;
     width: 100%;
-    height: calc(var(--sizey) * 3);
+    height: round(down, calc((var(--content-height) - 100vh) / 2 - var(--wave-screen-bottom-offset) - var(--wave-cloud-spacing)), var(--sizey));
     background-size: var(--sizex) var(--sizey);
     background-repeat: repeat;
     background-position: top center;
@@ -354,7 +367,7 @@ body {
     --sizex: 726px;
     --sizey: 91px;
     position: absolute;
-    top: 4710.5vh;
+    top: calc((var(--content-height) - 100vh) / 0.25 + 100vh - var(--wave-screen-bottom-offset));
     width: 100%;
     height: var(--sizey);
     background-size: var(--sizex) var(--sizey);
@@ -363,19 +376,22 @@ body {
     background-image: url('wavefg2.webp')
 }
 
-.fg3-water {
+.fg3-wave::after {
+    content: "";
     position: absolute;
-    top: calc(4710.5vh + 91px);
-    width: 100%;
-    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: calc(var(--wave-screen-bottom-offset) - var(--sizey));
     background: var(--bg-color);
+    pointer-events: none;
 }
 
 .fg1-wave {
     --sizex: 240px;
     --sizey: 33px;
     position: absolute;
-    top: 1602.5vh;
+    top: calc((var(--content-height) - 100vh) / 0.75 + 100vh - var(--wave-screen-bottom-offset));
     width: 100%;
     height: var(--sizey);
     background-size: var(--sizex) var(--sizey);
@@ -384,19 +400,22 @@ body {
     background-image: url('wavefg1.webp')
 }
 
-.fg1-water {
+.fg1-wave::after {
+    content: "";
     position: absolute;
-    top: calc(1602.5vh + 33px);
-    width: 100%;
-    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: calc(var(--wave-screen-bottom-offset) - var(--sizey));
     background: var(--bg-color);
+    pointer-events: none;
 }
 
 .bg1-wave {
     --sizex: 144px;
     --sizey: 22px;
     position: absolute;
-    top: 980.5vh;
+    top: calc((var(--content-height) - 100vh) / 1.25 + 100vh - var(--wave-screen-bottom-offset));
     width: 100%;
     height: var(--sizey);
     background-size: var(--sizex) var(--sizey);
@@ -405,31 +424,38 @@ body {
     background-image: url('wavebg1.webp')
 }
 
-.bg1-water {
+.bg1-wave::after {
+    content: "";
     position: absolute;
-    top: calc(980.5vh + 22px);
-    width: 100%;
-    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: calc(var(--wave-screen-bottom-offset) - var(--sizey));
     background: var(--bg-color);
+    pointer-events: none;
 }
 
 .bg3-wave {
     --sizex: 102px;
     --sizey: 17px;
     position: absolute;
-    top: 714.286vh;
+    top: calc((var(--content-height) - 100vh) / 1.75 + 100vh - var(--wave-screen-bottom-offset));
     width: 100%;
     height: var(--sizey);
     background-size: var(--sizex) var(--sizey);
     background-repeat: repeat-x;
     background-position: top center;
-    background-image: url('wavebg2.webp')
+    background-image: url('wavebg2.webp');
+    transform: translateZ(0);
 }
 
-.bg3-water {
+.bg3-wave::after {
+    content: "";
     position: absolute;
-    top: calc(714.286vh + 17px);
-    width: 100%;
-    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: calc(var(--wave-screen-bottom-offset) - var(--sizey));
     background: var(--bg-color);
+    pointer-events: none;
 }
