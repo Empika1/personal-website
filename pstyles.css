@@ -1,13 +1,13 @@
 :root {
     --content-width: min(calc(100% - 20ch), 100ch);
     --content-clouds-allowed-overlap: 2ch;
-    --content-height: 5500px;
+    --content-height: 5000px;
 
     --bg-color: #00010f;
-    --wave-screen-bottom-offset: max(25vh, 150px);
-    --wave-cloud-spacing: 25vh;
-    --wave-content-spacing: 5em;
-    --wave-fake-offset: 30px;
+    --wave-screen-bottom-offset: max(30vh, 150px);
+    --wave-cloud-min-spacing: 25vh;
+    --wave-content-spacing: 75px;
+    --wave-fake-offset: 35px;
     --wave-fake-offset-default: calc(var(--wave-fake-offset) / 1.75);
 
     --page-height: calc(var(--content-height) + var(--wave-screen-bottom-offset) + var(--wave-content-spacing));
@@ -317,7 +317,7 @@ body {
     left: min(0px, calc(50% - var(--sizex) * 0.5 - var(--content-clouds-allowed-overlap) - var(--content-width) * 0.5));
     /* make the clouds shift to the left if they would overlap content */
     width: 100%;
-    height: round(down, calc((var(--page-height) - 100vh) / 0.75 - var(--wave-screen-bottom-offset) - var(--wave-cloud-spacing)), var(--sizey));
+    height: round(down, calc((var(--page-height) - 100vh) / 0.75 - var(--wave-screen-bottom-offset) - var(--wave-cloud-min-spacing)), var(--sizey));
     background-size: var(--sizex) var(--sizey);
     background-repeat: repeat-y;
     background-position: top left calc(var(--sizex) * -0.5);
@@ -332,7 +332,7 @@ body {
     right: min(0px, calc(50% - var(--sizex) * 0.5 - var(--content-clouds-allowed-overlap) - var(--content-width) * 0.5));
     /* make the clouds shift to the left if they would overlap content */
     width: 100%;
-    height: round(down, calc((var(--page-height) - 100vh) / 0.75 - var(--wave-screen-bottom-offset) - var(--wave-cloud-spacing)), var(--sizey));
+    height: round(down, calc((var(--page-height) - 100vh) / 0.75 - var(--wave-screen-bottom-offset) - var(--wave-cloud-min-spacing)), var(--sizey));
     background-size: var(--sizex) var(--sizey);
     background-repeat: repeat-y;
     background-position: top right calc(var(--sizex) * -0.5);
@@ -345,7 +345,7 @@ body {
     position: absolute;
     top: 100vh;
     width: 100%;
-    height: round(down, calc((var(--page-height) - 100vh) / 1.5 - var(--wave-screen-bottom-offset) - var(--wave-cloud-spacing)), var(--sizey));
+    height: round(down, calc((var(--page-height) - 100vh) / 1.5 - var(--wave-screen-bottom-offset) - var(--wave-cloud-min-spacing)), var(--sizey));
     background-size: var(--sizex) var(--sizey);
     background-repeat: repeat;
     background-position: top center;
@@ -358,7 +358,7 @@ body {
     position: absolute;
     top: 100vh;
     width: 100%;
-    height: round(down, calc((var(--page-height) - 100vh) / 2 - var(--wave-screen-bottom-offset) - var(--wave-cloud-spacing)), var(--sizey));
+    height: round(down, calc((var(--page-height) - 100vh) / 2 - var(--wave-screen-bottom-offset) - var(--wave-cloud-min-spacing)), var(--sizey));
     background-size: var(--sizex) var(--sizey);
     background-repeat: repeat;
     background-position: top center;
