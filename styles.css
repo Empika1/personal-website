@@ -1,13 +1,15 @@
 :root {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
+    --font-size: 20px;
+    font-size: var(--font-size);
 
     --fg-accent-color: #ff9ef2;
-    --subtitle-color: #7c7c7c;
+    --subtitle-color: #8b8b8b;
     --fg-accent-color-2: #8dd5e7;
 
     --box-border-size: 2px;
     --box-border-color: var(--fg-accent-color);
+    --box-background-color-opaque: rgb(1, 0, 10);
     --box-background-color: rgba(1, 0, 10, 0.9);
     --box-padding-x: 2ch;
     --box-padding-y: 1em;
@@ -114,7 +116,6 @@ h2.subtitle {
     align-items: center;
     justify-content: center;
     border-radius: 6px;
-    transition: transform 80ms ease, color 80ms ease, background-color 80ms ease;
 }
 
 .social-icons a.social-link svg {
@@ -166,7 +167,7 @@ h1.section-header {
 
 .box {
     color: var(--text-color);
-    text-shadow: 0 0 8px var(--bg-color);
+    text-shadow: 0 0 8px var(--bg-color), 0 0 12px var(--bg-color), 0 0 16px var(--bg-color);
     background-color: var(--box-background-color);
     border: var(--box-border-size) solid var(--box-border-color);
     padding-left: var(--box-padding-x);
@@ -201,6 +202,34 @@ h1.section-header {
 
 figcaption {
     font-style: italic;
+}
+
+.project-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--bg-color);
+    width: calc(var(--font-size) * 1.2);
+    height: calc(var(--font-size) * 1.2);
+    border-radius: 6px;
+    vertical-align: -15%;
+}
+
+.project-icon svg {
+    width: calc(var(--font-size) * 1.1);
+    height: calc(var(--font-size) * 1.1);
+}
+
+.major-project {
+    background-color: #ffff39;
+}
+
+.solo-project {
+    background-color: #62fff2;
+}
+
+.game-project {
+    background-color: #75ff75;
 }
 
 .diamond-decal-tl,
