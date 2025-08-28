@@ -670,17 +670,6 @@ h3.inner-subheader {
     background-image: url('wavefg2.webp')
 }
 
-.fg3-wave::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
-    height: calc(var(--wave-screen-bottom-offset) - var(--sizey) - var(--wave-fake-offset) / 0.25 + var(--wave-fake-offset-default));
-    background: var(--bg-color);
-    pointer-events: none;
-}
-
 .fg1-wave {
     --sizex: 240px;
     --sizey: 33px;
@@ -694,17 +683,6 @@ h3.inner-subheader {
     background-image: url('wavefg1.webp')
 }
 
-.fg1-wave::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
-    height: calc(var(--wave-screen-bottom-offset) - var(--sizey) - var(--wave-fake-offset) / 0.75 + var(--wave-fake-offset-default));
-    background: var(--bg-color);
-    pointer-events: none;
-}
-
 .bg1-wave {
     --sizex: 144px;
     --sizey: 22px;
@@ -716,17 +694,6 @@ h3.inner-subheader {
     background-repeat: repeat-x;
     background-position: top center;
     background-image: url('wavebg1.webp')
-}
-
-.bg1-wave::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
-    height: calc(var(--wave-screen-bottom-offset) - var(--sizey) - var(--wave-fake-offset) / 1.25 + var(--wave-fake-offset-default));
-    background: var(--bg-color);
-    pointer-events: none;
 }
 
 .bg3-wave {
@@ -749,7 +716,7 @@ h3.inner-subheader {
     left: 0;
     right: 0;
     top: 100%;
-    height: calc(var(--wave-screen-bottom-offset) - var(--sizey) - var(--wave-fake-offset) / 1.75 + var(--wave-fake-offset-default));
+    height: calc(var(--wave-screen-bottom-offset) - var(--sizey));
     background: var(--bg-color);
     pointer-events: none;
 }
