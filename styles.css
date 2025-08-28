@@ -299,6 +299,12 @@ h3.inner-subheader {
     max-width: 192px;
 }
 
+@media (max-width: 640px) {
+    .project img {
+        display: none;
+    }
+}
+
 .diamond-decal-tl,
 .diamond-decal-tr,
 .diamond-decal-bl,
