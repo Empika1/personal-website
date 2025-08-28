@@ -16,7 +16,7 @@
     --box-border-size: 2px;
     --box-border-color: var(--fg-accent-color);
     --box-background-color-opaque: rgb(1, 0, 10);
-    --box-background-color: rgba(1, 0, 10, 0.9);
+    --box-background-color: rgba(1, 0, 10, 0.92);
     --box-padding-x: 2ch;
     --box-padding-y: 1em;
     --box-spacing: 4em;
@@ -29,8 +29,7 @@
 
     --content-width: min(calc(100% - 6ch), 100ch);
     --content-clouds-allowed-overlap: 1.5ch;
-    --content-height: max(calc(-4231.740801757277vw + 28240.935200439322px), calc(-3069.1927512355855vw + 23716.298187808898px), calc(-725.9747391543107vw + 10329.493684788577px), calc(-313.0148270181219vw + 7218.253706754531px), calc(-183.96485447556296vw + 6010.991213618891px), 5000px);
-    /* todo: just calculate this with js like a sane person */
+    --content-height: 5000px;
 
     --bg-color: #00010f;
     --wave-screen-bottom-offset: max(30vh, 150px);
@@ -603,8 +602,8 @@ h3.inner-subheader {
 }
 
 .fg1-clouds-left {
-    --sizex: 634px;
-    --sizey: 1390px;
+    --sizex: 482px;
+    --sizey: 825px;
     position: absolute;
     top: 100vh;
     left: min(0px, calc(50% - var(--sizex) * 0.5 + var(--content-clouds-allowed-overlap) - var(--content-width) * 0.5));
@@ -618,8 +617,8 @@ h3.inner-subheader {
 }
 
 .fg1-clouds-right {
-    --sizex: 527px;
-    --sizey: 1350px;
+    --sizex: 482px;
+    --sizey: 829px;
     position: absolute;
     top: 100vh;
     right: min(0px, calc(50% - var(--sizex) * 0.5 + var(--content-clouds-allowed-overlap) - var(--content-width) * 0.5));
@@ -634,7 +633,7 @@ h3.inner-subheader {
 
 .bg2-clouds {
     --sizex: 1674px;
-    --sizey: 1681px;
+    --sizey: 1277px;
     position: absolute;
     top: 100vh;
     width: 100%;
@@ -647,7 +646,7 @@ h3.inner-subheader {
 
 .bg4-clouds {
     --sizex: 1069px;
-    --sizey: 1477px;
+    --sizey: 1052px;
     position: absolute;
     top: 100vh;
     width: 100%;
