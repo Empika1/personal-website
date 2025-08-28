@@ -4,8 +4,14 @@
     font-size: var(--font-size);
 
     --fg-accent-color: #ff9ef2;
-    --subtitle-color: #8b8b8b;
-    --fg-accent-color-2: #8dd5e7;
+    --subtitle-color: #979797;
+    --fg-accent-color-2: #a2ecff;
+    --subheading-color: #bbbbbb;
+
+    --link-color: var(--fg-accent-color-2);
+    --link-hover-color: #ff9ef2;
+    --link-active-color: #ffffff;
+    --link-visited-color: #a2ffe8;
 
     --box-border-size: 2px;
     --box-border-color: var(--fg-accent-color);
@@ -51,6 +57,39 @@ body {
     overflow-y: scroll;
 }
 
+em {
+    font-style: italic;
+    color: var(--em-color);
+}
+
+a:link {
+    color: var(--link-color);
+}
+
+a:visited {
+    color: var(--link-visited-color);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+a:active {
+    color: var(--link-active-color);
+}
+
+figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+}
+
 .content {
     background-color: transparent;
     color: white;
@@ -65,7 +104,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* restore default centering */
     align-items: center;
 }
 
@@ -123,15 +161,16 @@ h2.subtitle {
     height: 30px;
 }
 
+.social-icons a.social-link:visited {
+    background-color: var(--link-visited-color);
+}
+
 .social-icons a.social-link:hover {
-    background-color: var(--fg-accent-color);
-    outline: none;
+    background-color: var(--link-hover-color);
 }
 
 .social-icons a.social-link:active {
-    background-color: white;
-    color: var(--fg-accent-color);
-    outline: none;
+    background-color: var(--link-active-color);
 }
 
 .down-arrow {
@@ -156,13 +195,27 @@ h2.subtitle {
 h1.section-header {
     display: inline-block;
     width: auto;
-    font-size: 48px;
+    font-size: 54px;
     font-weight: bold;
     line-height: 1.1;
     color: var(--fg-accent-color-2);
     text-align: center;
     background-color: var(--bg-color);
     border-radius: 24px;
+}
+
+h2.inner-header {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.1;
+    color: var(--fg-accent-color-2);
+}
+
+h3.inner-subheader {
+    font-size: 24px;
+    font-weight: normal;
+    font-style: italic;
+    color: var(--subheading-color);
 }
 
 .box {
@@ -188,20 +241,8 @@ h1.section-header {
     align-items: center;
 }
 
-.box .pfps figure {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
 .box .pfps figure img {
     width: 128px;
-}
-
-figcaption {
-    font-style: italic;
 }
 
 .project-icon {
@@ -209,27 +250,53 @@ figcaption {
     justify-content: center;
     align-items: center;
     color: var(--bg-color);
-    width: calc(var(--font-size) * 1.2);
-    height: calc(var(--font-size) * 1.2);
+    width: 1.1em;
+    height: 1.1em;
     border-radius: 6px;
-    vertical-align: -15%;
+    vertical-align: -0.2em;
+    user-select: none;
+    pointer-events: none;
 }
 
 .project-icon svg {
-    width: calc(var(--font-size) * 1.1);
-    height: calc(var(--font-size) * 1.1);
+    width: 1em;
+    height: 1em;
 }
 
-.major-project {
+.contest-project {
     background-color: #ffff39;
 }
 
-.solo-project {
-    background-color: #62fff2;
+.major-project {
+    background-color: #ff7c92;
 }
 
 .game-project {
-    background-color: #75ff75;
+    background-color: #ff7ce9;
+}
+
+.solo-project {
+    background-color: #8fc3ff;
+}
+
+.wip-project {
+    background-color: #8eff8e;
+}
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2ch;
+}
+
+.project div {
+    flex: 1 1;    
+}
+
+.project img {
+    max-height: 128px;
+    max-width: 192px;
 }
 
 .diamond-decal-tl,
@@ -264,19 +331,7 @@ figcaption {
     right: calc(-0.5 * (var(--diamond-decal-size) + var(--box-border-size)));
 }
 
-em {
-    font-style: italic;
-    color: var(--em-color);
-}
-
-/* .ruler {
-    height: var(--content-height);
-    border-left: 1px solid red;
-    background-image: linear-gradient(90deg, rgb(255, 0, 0) 50%, transparent 50%), linear-gradient(rgb(255, 0, 0) 50%, transparent 50%);
-    background-size: 1ch 1.2em;
-    background-position: left top;
-    background-repeat: repeat-y;
-} */
+/* PAGE DECORATION BELOW */
 
 .fg1,
 .fg2,
