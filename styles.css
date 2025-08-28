@@ -29,7 +29,8 @@
 
     --content-width: min(calc(100% - 6ch), 100ch);
     --content-clouds-allowed-overlap: 1.5ch;
-    --content-height: max(calc(-4231.740801757277vw + 28240.935200439322px), calc(-3069.1927512355855vw + 23716.298187808898px), calc(-725.9747391543107vw + 10329.493684788577px), calc(-313.0148270181219vw + 7218.253706754531px), calc(-183.96485447556296vw + 6010.991213618891px), calc(-85.66721581548593vw + 4912.416803953871px), 3799.0px);
+    --content-height: max(calc(-4231.740801757277vw + 28240.935200439322px), calc(-3069.1927512355855vw + 23716.298187808898px), calc(-725.9747391543107vw + 10329.493684788577px), calc(-313.0148270181219vw + 7218.253706754531px), calc(-183.96485447556296vw + 6010.991213618891px), 5000px);
+    /* todo: just calculate this with js like a sane person */
 
     --bg-color: #00010f;
     --wave-screen-bottom-offset: max(30vh, 150px);
