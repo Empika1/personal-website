@@ -55,6 +55,8 @@ body {
     transform-style: preserve-3d;
     overflow-x: hidden;
     overflow-y: scroll;
+
+    word-break: break-word;
 }
 
 em {
@@ -132,6 +134,11 @@ h2.subtitle {
     line-height: 1.1;
     color: var(--subtitle-color);
     text-align: center;
+    background-color: var(--bg-color);
+    border-radius: 12px;
+}
+
+p.non-box {
     background-color: var(--bg-color);
     border-radius: 12px;
 }
