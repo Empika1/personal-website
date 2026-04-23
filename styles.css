@@ -1,6 +1,6 @@
 :root {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  --font-size: 20px;
+  --font-size: clamp(1rem, calc(1.25rem + (100vw - 1536px) / 150), 1.3rem);
   font-size: var(--font-size);
 
   --fg-accent-color: #ff9ef2;
@@ -24,10 +24,10 @@
   --text-color: rgb(255, 255, 255);
   --em-color: rgb(184, 247, 255);
 
-  --diamond-decal-size: 24px;
+  --diamond-decal-size: 1.25em;
   --diamond-decal-color: var(--fg-accent-color);
 
-  --content-width: min(calc(100% - 6ch), 80ch);
+  --content-width: min(calc(100% - 4ch), 80ch);
   --content-clouds-allowed-overlap: 1.5ch;
   --content-height: 5000px;
 
@@ -51,8 +51,8 @@ body {
   height: 100vh;
   margin: 0;
   background: darkblue;
-  perspective: 1px;
-  transform-style: preserve-3d;
+  /* perspective: 1px;
+  transform-style: preserve-3d; */
   overflow-x: hidden;
   overflow-y: scroll;
 
@@ -111,66 +111,58 @@ figcaption {
   align-items: center;
 }
 
-/* When viewport is short, align the title content to the top so it doesn't get vertically centered */
-/* @media (max-height: 560px) {
-  .title-container {
-    justify-content: flex-start;
-    padding-top: 20px;
-    height: 100vh;
-  }
-} */
-
 h1.title {
-  display: inline;
-  font-size: 96px;
+  font-size: 5em;
   font-weight: bold;
   line-height: 1.1;
   color: var(--fg-accent-color);
   text-align: center;
   background-color: var(--bg-color);
-  border-radius: 48px;
+  border-radius: 9999px;
+  flex-shrink: 0;
 }
 
 h2.subtitle {
-  font-size: 24px;
+  font-size: 1.2em;
   font-style: italic;
   line-height: 1.1;
   color: var(--subtitle-color);
   text-align: center;
   background-color: var(--bg-color);
-  border-radius: 12px;
+  border-radius: 9999px;
   flex-shrink: 0;
+  padding-top: 0.05em;
 }
 
 p.non-box {
   background-color: var(--bg-color);
-  border-radius: 12px;
+  border-radius: 1em;
 }
 
 .social-icons {
-  padding-top: 10px;
-  gap: 10px;
+  padding-top: 0.5em;
+  gap: 0.5em;
   display: flex;
   align-items: center;
   background-color: var(--bg-color);
-  border-radius: 12px;
+  border-radius: 9999px;
   flex-shrink: 0;
 }
 
 .social-icons a.social-link {
   color: var(--bg-color);
   background-color: var(--fg-accent-color-2);
-  width: 36px;
-  height: 36px;
+  width: 1.75em;
+  height: 1.75em;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 6px;
+  border-radius: 0.25em;
 }
 
 .social-icons a.social-link svg {
-  width: 30px;
-  height: 30px;
+  width: 1.6em;
+  height: 1.6em;
 }
 
 .social-icons a.social-link:visited {
@@ -186,14 +178,14 @@ p.non-box {
 }
 
 .down-arrow {
-  --sizex: 48px;
-  --sizey: 48px;
+  --sizex: 2.5em;
+  --sizey: 2.5em;
   width: var(--sizex);
   height: var(--sizey);
   color: var(--fg-accent-color);
   background-color: var(--bg-color);
   border-radius: calc(var(--sizey) / 2);
-  margin-top: 24px;
+  margin-top: 1.25em;
   flex-shrink: 0;
 }
 
@@ -202,30 +194,30 @@ p.non-box {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 6px;
 }
 
 h1.section-header {
   display: inline-block;
   width: auto;
-  font-size: 54px;
-  font-weight: bold;
+  font-size: 2.75em;
   line-height: 1.1;
+  font-weight: bold;
   color: var(--fg-accent-color-2);
   text-align: center;
   background-color: var(--bg-color);
-  border-radius: 24px;
+  border-radius: 9999px;
+  padding-bottom: 0.2em;
 }
 
 h2.inner-header {
-  font-size: 32px;
+  font-size: 1.6em;
   font-weight: bold;
   line-height: 1.1;
   color: var(--fg-accent-color-2);
 }
 
 h3.inner-subheader {
-  font-size: 24px;
+  font-size: 1.2em;
   font-weight: normal;
   font-style: italic;
   color: var(--subheading-color);
@@ -233,7 +225,7 @@ h3.inner-subheader {
 
 .box {
   color: var(--text-color);
-  text-shadow: 0 0 8px var(--bg-color), 0 0 12px var(--bg-color), 0 0 16px var(--bg-color);
+  text-shadow: 0 0 0.5em var(--bg-color), 0 0 0.6em var(--bg-color), 0 0 0.8em var(--bg-color);
   background-color: var(--box-background-color);
   border: var(--box-border-size) solid var(--box-border-color);
   padding-left: var(--box-padding-x);
@@ -245,17 +237,17 @@ h3.inner-subheader {
   margin-bottom: var(--section-spacing);
 }
 
-.box .pfps {
+/* .box .pfps {
   display: flex;
   justify-content: center;
   gap: 24px;
   margin-top: 12px;
   align-items: center;
-}
+} */
 
-.box .pfps figure img {
+/* .box .pfps figure img {
   width: 128px;
-}
+} */
 
 .project-icon {
   display: inline-flex;
@@ -264,7 +256,7 @@ h3.inner-subheader {
   color: var(--bg-color);
   width: 1.1em;
   height: 1.1em;
-  border-radius: 6px;
+  border-radius: 0.2em;
   vertical-align: -0.2em;
   user-select: none;
   pointer-events: none;
@@ -301,14 +293,14 @@ h3.inner-subheader {
 
 .project img {
   float: right;
-  max-height: 128px;
-  max-width: 192px;
+  max-height: 6em;
+  max-width: 9.5em;
   margin-left: 2ch;
   margin-top: 1ex;
   margin-bottom: 1ex;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 75ch) {
   .project img {
     display: none;
   }
