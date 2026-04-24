@@ -5,7 +5,9 @@
   --wave-screen-bottom-offset: max(30vh, 150px);
   --wave-cloud-min-spacing: 25vh;
   --wave-content-spacing: 75px;
-  --cloud-bottom-offset: max(30vh, 150px);
+  --fg1-cloud-bottom-spacing: min(50vh, 400px);
+  --bg2-cloud-bottom-spacing: min(35vh, 300px);
+  --bg4-cloud-bottom-spacing: min(30vh, 200px);
   --wave-fake-offset: 35px;
   --wave-fake-offset-default: calc(var(--wave-fake-offset) / 1.75);
   --wave-tilt-offset: 5em;
@@ -186,7 +188,7 @@
 }
 
 .bg18-stars {
-  height: calc((var(--page-height) - 100vh) / 5.5 + 100vh);
+  height: calc((var(--page-height) - 100vh) / 0.75 + 100vh);
   background-image: url('stars1.webp');
 }
 
@@ -216,12 +218,11 @@
   position: absolute;
   top: 100vh;
   width: 100vw;
-  /* height: round(down, calc((var(--page-height) - 100vh) / 0.75 - var(--wave-screen-bottom-offset) - var(--wave-cloud-min-spacing)), var(--sizey)); */
-  height: calc((var(--page-height) - 100vh) / 0.75 + 100vh);
+  height: round(down, calc((var(--page-height) - 100vh) / 0.75 - var(--fg1-cloud-bottom-spacing)), var(--sizey));
   background-size: var(--sizex) var(--sizey);
   background-repeat: repeat-y;
-  background-position: top 0 left min(calc(50vw - var(--content-width) * 0.5 - var(--sizex) + var(--content-clouds-allowed-overlap)),
-      calc(25vw - var(--sizex)));
+  background-position: top left min(calc(50vw - var(--content-width) * 0.5 - var(--sizex) + var(--content-clouds-allowed-overlap)),
+      calc(-0.3 * var(--sizex)));
   background-image: url('cloudsfgleft.webp');
 }
 
@@ -230,13 +231,12 @@
   --sizey: 829px;
   position: absolute;
   top: 100vh;
-  right: min(0px, calc(50% - var(--sizex) * 0.5 + var(--content-clouds-allowed-overlap) - var(--content-width) * 0.5));
-  /* make the clouds shift to the left if they would overlap content */
-  width: 100%;
-  height: round(down, calc((var(--page-height) - 100vh) / 0.75 - var(--wave-screen-bottom-offset) - var(--wave-cloud-min-spacing)), var(--sizey));
+  width: 100vw;
+  height: round(down, calc((var(--page-height) - 100vh) / 0.75 - var(--fg1-cloud-bottom-spacing)), var(--sizey));
   background-size: var(--sizex) var(--sizey);
   background-repeat: repeat-y;
-  background-position: top right calc(var(--sizex) * -0.5);
+  background-position: top right min(calc(50vw - var(--content-width) * 0.5 - var(--sizex) + var(--content-clouds-allowed-overlap)),
+      calc(-0.3 * var(--sizex)));
   background-image: url('cloudsfgright.webp');
 }
 
@@ -246,9 +246,9 @@
   position: absolute;
   top: 100vh;
   width: 100%;
-  height: round(down, calc((var(--page-height) - 100vh) / 1.5 - var(--wave-screen-bottom-offset) - var(--wave-cloud-min-spacing)), var(--sizey));
+  height: round(down, calc((var(--page-height) - 100vh) / 1.5 - var(--bg2-cloud-bottom-spacing)), var(--sizey));
   background-size: var(--sizex) var(--sizey);
-  background-repeat: repeat;
+  background-repeat: repeat-y;
   background-position: top center;
   background-image: url('cloudsbg1.webp');
 }
@@ -259,7 +259,7 @@
   position: absolute;
   top: 100vh;
   width: 100%;
-  height: round(down, calc((var(--page-height) - 100vh) / 2 - var(--wave-screen-bottom-offset) - var(--wave-cloud-min-spacing)), var(--sizey));
+  height: round(down, calc((var(--page-height) - 100vh) / 2 - var(--bg4-cloud-bottom-spacing)), var(--sizey));
   background-size: var(--sizex) var(--sizey);
   background-repeat: repeat;
   background-position: top center;
@@ -271,12 +271,12 @@
   --sizey: 91px;
   position: absolute;
   top: calc((var(--page-height) - 100vh) / 0.25 + 100vh - var(--sizey));
-  width: 100%;
-  height: var(--sizey);
-  background-size: var(--sizex) var(--sizey);
-  background-repeat: repeat-x;
-  background-position: top center;
-  background-image: url('wavefg2.webp')
+  width: 100vw;
+  height: calc(var(--sizey) + 100vh);
+  background-size: var(--sizex) var(--sizey), 100vw 100vh;
+  background-repeat: repeat-x, no-repeat;
+  background-position: top center, top var(--sizey) center;
+  background-image: url('wavefg2.webp'), linear-gradient(var(--bg-color), var(--bg-color));
 }
 
 /* wave offsets are chosen to look good */
@@ -286,12 +286,12 @@
   --sizey: 33px;
   position: absolute;
   top: calc((var(--page-height) - 100vh) / 0.75 + 100vh - var(--sizey) - 120px);
-  width: 100%;
-  height: var(--sizey);
-  background-size: var(--sizex) var(--sizey);
-  background-repeat: repeat-x;
-  background-position: top center;
-  background-image: url('wavefg1.webp')
+  width: 100vw;
+  height: calc(var(--sizey) + 100vh);
+  background-size: var(--sizex) var(--sizey), 100vw 100vh;
+  background-repeat: repeat-x, no-repeat;
+  background-position: top center, top var(--sizey) center;
+  background-image: url('wavefg1.webp'), linear-gradient(var(--bg-color), var(--bg-color));
 }
 
 .bg1-wave {
@@ -299,12 +299,12 @@
   --sizey: 22px;
   position: absolute;
   top: calc((var(--page-height) - 100vh) / 1.25 + 100vh - var(--sizey) - 160px);
-  width: 100%;
-  height: var(--sizey);
-  background-size: var(--sizex) var(--sizey);
-  background-repeat: repeat-x;
-  background-position: top center;
-  background-image: url('wavebg1.webp')
+  width: 100vw;
+  height: calc(var(--sizey) + 100vh);
+  background-size: var(--sizex) var(--sizey), 100vw 100vh;
+  background-repeat: repeat-x, no-repeat;
+  background-position: top center, top var(--sizey) center;
+  background-image: url('wavebg1.webp'), linear-gradient(var(--bg-color), var(--bg-color));
 }
 
 .bg3-wave {
@@ -312,22 +312,10 @@
   --sizey: 17px;
   position: absolute;
   top: calc((var(--page-height) - 100vh) / 1.75 + 100vh - var(--sizey) - 180px);
-  width: 100%;
-  height: var(--sizey);
-  background-size: var(--sizex) var(--sizey);
-  background-repeat: repeat-x;
-  background-position: top center;
-  background-image: url('wavebg2.webp');
-  transform: translateZ(0);
-}
-
-.bg3-wave::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100%;
-  height: calc(var(--wave-screen-bottom-offset) - var(--sizey));
-  background: var(--bg-color);
-  pointer-events: none;
+  width: 100vw;
+  height: calc(var(--sizey) + 100vh);
+  background-size: var(--sizex) var(--sizey), 100vw 100vh;
+  background-repeat: repeat-x, no-repeat;
+  background-position: top center, top var(--sizey) center;
+  background-image: url('wavebg2.webp'), linear-gradient(var(--bg-color), var(--bg-color));
 }
