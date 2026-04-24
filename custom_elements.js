@@ -26,7 +26,8 @@ class ProjectIcon extends HTMLElement {
     const iconTypes = this.getAttribute("types").split(" ");
     this.innerHTML = iconTypes.map(type =>
       `<span class="project-icon ${type}-project">
-        <svg>
+        <svg aria-label="${type} project icon">
+          <title ${type} project icon>
           <use href="#icon-${type}"></use>
         </svg>
       </span>`).join(" ");

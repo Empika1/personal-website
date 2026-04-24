@@ -52,73 +52,77 @@
     </symbol>
   </svg>
 
-  <div class="fg3">
-    <div class="fg3-wave"></div>
+  <div aria-hidden="true" aria-label="fancy parallax decoration">
+    <div class="fg3">
+      <div class="fg3-wave"></div>
+    </div>
+    <div class="fg1">
+      <div class="fg1-wave"></div>
+      <div class="fg1-clouds-left"></div>
+      <div class="fg1-clouds-right"></div>
+    </div>
+    <div class="bg1">
+      <div class="bg1-wave"></div>
+    </div>
+    <div class="bg2">
+      <div class="bg2-clouds"></div>
+    </div>
+    <div class="bg3">
+      <div class="bg3-wave"></div>
+    </div>
+    <div class="bg4">
+      <div class="bg4-clouds"></div>
+    </div>
+    <div class="bg10">
+      <div class="moon"></div>
+    </div>
+    <div class="bg18">
+      <div class="bg18-stars"></div>
+    </div>
+    <div class="bg19">
+      <div class="bg19-stars"></div>
+    </div>
+    <div class="bg20">
+      <div class="bg20-stars"></div>
+    </div>
   </div>
-  <div class="fg1">
-    <div class="fg1-wave"></div>
-    <div class="fg1-clouds-left"></div>
-    <div class="fg1-clouds-right"></div>
-  </div>
-  <div class="bg1">
-    <div class="bg1-wave"></div>
-  </div>
-  <div class="bg2">
-    <div class="bg2-clouds"></div>
-  </div>
-  <div class="bg3">
-    <div class="bg3-wave"></div>
-  </div>
-  <div class="bg4">
-    <div class="bg4-clouds"></div>
-  </div>
-  <div class="bg10">
-    <div class="moon"></div>
-  </div>
-  <div class="bg18">
-    <div class="bg18-stars"></div>
-  </div>
-  <div class="bg19">
-    <div class="bg19-stars"></div>
-  </div>
-  <div class="bg20">
-    <div class="bg20-stars"></div>
-  </div>
-
   <div class="content">
-    <div class="title-container">
-      <h1 class="title">Nadia Singh</h1>
-      <h2 class="subtitle">a.k.a. empika</h2>
-      <div class="social-icons" aria-hidden="false">
-        <a class="social-link" href="https://github.com/Empika1" aria-label="GitHub">
-          <svg role="img" viewBox="0 0 640 640" fill="currentColor" aria-hidden="false" focusable="false">
-            <title>GitHub</title>
-            <use href="#icon-github" xlink:href="#icon-github"></use>
-          </svg>
-        </a>
-        <a class="social-link" href="PLACEHOLDER!" aria-label="LinkedIn">
-          <svg role="img" viewBox="0 0 640 640" fill="currentColor" aria-hidden="false" focusable="false">
-            <title>LinkedIn</title>
-            <use href="#icon-linkedin" xlink:href="#icon-linkedin"></use>
-          </svg>
-        </a>
+    <header>
+      <div class="title-container">
+        <h1 class="title">Nadia Singh</h1>
+        <h2 class="subtitle">a.k.a. empika</h2>
+        <div class="social-icons">
+          <a class="social-link" href="https://github.com/Empika1" aria-label="GitHub Link">
+            <svg viewBox="0 0 640 640" fill="currentColor" focusable="false" aria-label="GitHub Icon">
+              <title Github Icon></title>
+              <use href="#icon-github" xlink:href="#icon-github"></use>
+            </svg>
+          </a>
+          <a class="social-link" href="PLACEHOLDER!" aria-label="LinkedIn Link">
+            <svg viewBox="0 0 640 640" fill="currentColor" focusable="false" aria-label="LinkedIn Icon">
+              <title LinkedIn Icon></title>
+              <use href="#icon-linkedin" xlink:href="#icon-linkedin"></use>
+            </svg>
+          </a>
+        </div>
+        <svg class="down-arrow" viewBox="0 0 640 640" fill="currentColor" focusable="false"
+          aria-label="Down Arrow - Scroll Down">
+          <title Down Arrow></title>
+          <use href="#icon-down" xlink:href="#icon-down"></use>
+        </svg>
       </div>
-      <svg class="down-arrow" role="img" viewBox="0 0 640 640" fill="currentColor" aria-hidden="false"
-        focusable="false">
-        <title>Scroll down</title>
-        <use href="#icon-down" xlink:href="#icon-down"></use>
-      </svg>
-    </div>
+    </header>
 
-    <div class="section-header-container">
-      <h1 class="section-header">About Me</h1>
-    </div>
-    <diamond-div>
-      <p>
-        Hi! I'm Nadia, also known as <em>empika</em>. I'm a 2A Computer Science student at UWaterloo.
-        Here's some stuff I've made.
-      </p>
-      <!-- <div class="pfps" style="margin-top:12px;">
+    <main>
+      <div class="section-header-container">
+        <h1 class="section-header">About Me</h1>
+      </div>
+      <diamond-div>
+        <p>
+          Hi! I'm Nadia, also known as <em>empika</em>. I'm a 2A Computer Science student at UWaterloo.
+          Here's some stuff I've made.
+        </p>
+        <!-- <div class="pfps" style="margin-top:12px;">
                 <figure>
                     <img src="me.webp" style="border-radius: 25%;">
                     <figcaption>me</figcaption>
@@ -128,180 +132,181 @@
                     <figcaption>my profile picture</figcaption>
                 </figure>
             </div> -->
-    </diamond-div>
-    <div class="section-header-container">
-      <h1 class="section-header highlight">Projects</h1>
-    </div>
-    <diamond-div>
-      <p>Listed in (mostly) chronological order, from newest to oldest.</p><br>
-      <h2 class="inner-header">Legend:</h2>
-      <p>
-        <project-icon types="comp"></project-icon>: Competition Entry<br>
-        <project-icon types="game"></project-icon>: Game<br>
-        <project-icon types="major"></project-icon>: Major Project (~1 month or more of work)<br>
-        <project-icon types="solo"></project-icon>: Solo Project<br>
-        <project-icon types="wip"></project-icon>: Wip Project<br>
-        <br>
-      </p>
-      <div class="project">
-        <div>
-          <h2 class="inner-header"><a href="https://github.com/Empika1/personal-website">Personal Website:</a>
-            <project-icon types="solo wip"></project-icon>
-          </h2>
-          <h3 class="inner-subheader">HTML, CSS, JavaScript</h3>
-          <p>You're looking at it! Recently revamped to fix jank with the original version.
-            Hopefully you like my parallax!</p>
+      </diamond-div>
+      <div class="section-header-container">
+        <h1 class="section-header highlight">Projects</h1>
+      </div>
+      <diamond-div>
+        <p>Listed in (mostly) chronological order, from newest to oldest.</p><br>
+        <h2 class="inner-header">Legend:</h2>
+        <p>
+          <project-icon types="comp"></project-icon>: Competition Entry<br>
+          <project-icon types="game"></project-icon>: Game<br>
+          <project-icon types="major"></project-icon>: Major Project (~1 month or more of work)<br>
+          <project-icon types="solo"></project-icon>: Solo Project<br>
+          <project-icon types="wip"></project-icon>: Wip Project<br>
           <br>
+        </p>
+        <div class="project">
+          <div>
+            <h2 class="inner-header"><a href="https://github.com/Empika1/personal-website">Personal Website:</a>
+              <project-icon types="solo wip"></project-icon>
+            </h2>
+            <h3 class="inner-subheader">HTML, CSS, JavaScript</h3>
+            <p>You're looking at it! Recently revamped to fix jank with the original version.
+              Hopefully you like my parallax!</p>
+            <br>
+          </div>
         </div>
-      </div>
-      <div class="project">
-        <img src="remindbot.webp">
-        <div>
-          <h2 class="inner-header"><a href="https://github.com/Empika1/remindbot">RemindBot:</a>
-            <project-icon types="solo"></project-icon>
-          </h2>
-          <h3 class="inner-subheader">Python | discord.py</h3>
-          <p>Simple Discord bot for setting and managing reminders in a server or DM. Can do things that
-            built-in Discord events can't.</p>
-          <br>
+        <div class="project">
+          <img src="remindbot.webp" alt="RemindBot Icon">
+          <div>
+            <h2 class="inner-header"><a href="https://github.com/Empika1/remindbot">RemindBot:</a>
+              <project-icon types="solo"></project-icon>
+            </h2>
+            <h3 class="inner-subheader">Python | discord.py</h3>
+            <p>Simple Discord bot for setting and managing reminders in a server or DM. Can do things that
+              built-in Discord events can't.</p>
+            <br>
+          </div>
         </div>
-      </div>
-      <div class="project">
-        <img src="ft.webp">
-        <div>
-          <h2 class="inner-header">Flying Triangles (<a href="https://github.com/evenifyouforget/ftlib">FTLib,
-            </a><a href="https://github.com/Empika1/ftgame">FTGame</a>)
-            <project-icon types="game major wip"></project-icon>
-          </h2>
-          <h3 class="inner-subheader">C++, Python, GDScript, GDShader | Box2D, SCons, Godot Engine</h3>
-          <p>WIP remake of the 2008 Flash physics game <a
-              href="https://www.fantasticcontraption.com/original/">Fantastic Contraption</a>. FTLib made
-            mostly by Pawel Anikiel and Komi Amiko, FTGame made mostly by me.
-            Not sure I will ever come back and finish this.
-          </p>
-          <br>
+        <div class="project">
+          <img src="ft.webp" alt="Flying Triangles Unofficial Icon">
+          <div>
+            <h2 class="inner-header">Flying Triangles (<a href="https://github.com/evenifyouforget/ftlib">FTLib,
+              </a><a href="https://github.com/Empika1/ftgame">FTGame</a>)
+              <project-icon types="game major wip"></project-icon>
+            </h2>
+            <h3 class="inner-subheader">C++, Python, GDScript, GDShader | Box2D, SCons, Godot Engine</h3>
+            <p>WIP remake of the 2008 Flash physics game <a
+                href="https://www.fantasticcontraption.com/original/">Fantastic Contraption</a>. FTLib made
+              mostly by Pawel Anikiel and Komi Amiko, FTGame made mostly by me.
+              Not sure I will ever come back and finish this.
+            </p>
+            <br>
+          </div>
         </div>
-      </div>
-      <div class="project">
-        <div>
-          <h2 class="inner-header"><a href="https://github.com/Empika1/units-zig">Units-Zig:</a>
-            <project-icon types="solo"></project-icon>
-          </h2>
-          <h3 class="inner-subheader">Zig</h3>
-          <p>Library for comptime dimensional/unit analysis in Zig. Allows for definition of custom units and
-            quantities, among other cool features. Made mostly so I could learn how comptime works in Zig,
-            and also because "compile time dimensional analysis" sounds very fancy on a portfolio.
-          </p>
-          <br>
+        <div class="project">
+          <div>
+            <h2 class="inner-header"><a href="https://github.com/Empika1/units-zig">Units-Zig:</a>
+              <project-icon types="solo"></project-icon>
+            </h2>
+            <h3 class="inner-subheader">Zig</h3>
+            <p>Library for comptime dimensional/unit analysis in Zig. Allows for definition of custom units and
+              quantities, among other cool features. Made mostly so I could learn how comptime works in Zig,
+              and also because "compile time dimensional analysis" sounds very fancy on a portfolio.
+            </p>
+            <br>
+          </div>
         </div>
-      </div>
-      <div class="project">
-        <img src="operationoverride.svg">
-        <div>
-          <h2 class="inner-header"><a href="https://github.com/hlsshackclub/OperationOverride">Operation
-              Override:</a>
-            <project-icon types="game major"></project-icon>
-          </h2>
-          <h3 class="inner-subheader">HTML, CSS, JavaScript, Python | Pyodide</h3>
-          <p>Web game initially made for an in-person event at my high school, made ~70% by me. Later modified
-            to work without the in-person components. Was my first time ever trying web development of any
-            kind, and a bit of a crazy project to jump into without any prior experience with the field.<br>
-            Play it <a href="https://hlsshackclub.github.io/OperationOverride/">here</a> (doesn't work well
-            on mobile).
-          </p>
-          <br>
+        <div class="project">
+          <img src="operationoverride.svg" alt="Operation Override Robot Icon">
+          <div>
+            <h2 class="inner-header"><a href="https://github.com/hlsshackclub/OperationOverride">Operation
+                Override:</a>
+              <project-icon types="game major"></project-icon>
+            </h2>
+            <h3 class="inner-subheader">HTML, CSS, JavaScript, Python | Pyodide</h3>
+            <p>Web game initially made for an in-person event at my high school, made ~70% by me. Later modified
+              to work without the in-person components. Was my first time ever trying web development of any
+              kind, and a bit of a crazy project to jump into without any prior experience with the field.<br>
+              <a href="https://hlsshackclub.github.io/OperationOverride/">Play it here</a> (doesn't work well
+              on mobile).
+            </p>
+            <br>
+          </div>
         </div>
-      </div>
-      <div class="project">
-        <div>
-          <h2 class="inner-header"><a href="https://github.com/Empika1/HackTheNorth">AutOST:</a>
-            <project-icon types="comp"></project-icon>
-          </h2>
-          <h3 class="inner-subheader">Python | TKinter, Pillow, Groq, FL Studio (yes, really)</h3>
-          <p>A procedural live music generator made for Hack the North 2024 by my high school bestie Matt
-            O'Toole and
-            I. Earned a spot as one of the 12 winners of the hackathon!<br>
-            Check out the <a href="https://devpost.com/software/autost">Devpost</a> here.
-          </p>
-          <br>
+        <div class="project">
+          <div>
+            <h2 class="inner-header"><a href="https://github.com/Empika1/HackTheNorth">AutOST:</a>
+              <project-icon types="comp"></project-icon>
+            </h2>
+            <h3 class="inner-subheader">Python | TKinter, Pillow, Groq, FL Studio (yes, really)</h3>
+            <p>A procedural live music generator made for Hack the North 2024 by my high school bestie Matt
+              O'Toole and
+              I. Earned a spot as one of the 12 winners of the hackathon!<br>
+              Check out the <a href="https://devpost.com/software/autost">Devpost</a> here.
+            </p>
+            <br>
+          </div>
         </div>
-      </div>
-      <div class="project">
-        <img src="hackclub.webp" style="border-radius: 32px">
-        <div>
-          <h2 class="inner-header">Code-Alongs (<a href="https://github.com/hlsshackclub/paint-game">Paint
-              Game,
-            </a><a href="https://github.com/hlsshackclub/RockPaperScissors">Rock Paper Scissors</a>, <a
-              href="https://github.com/hlsshackclub/Tic-Tac-Toe-Better">Tic Tac Toe</a>)
-            <project-icon types="solo"></project-icon>
-          </h2>
-          <h3 class="inner-subheader">Python | Tkinter, EZDrawing</h3>
-          <p>Three code-alongs designed to teach beginners in the HLSS Hack Club. Were all executed to various
-            levels of success: Tic Tac Toe was quite successful, Paint Game never happened, and Rock Paper
-            Scissors was in between. Turns out running a coding club is quite difficult when few people are
-            interested in coding...
-          </p>
-          <br>
+        <div class="project">
+          <img src="hackclub.webp" style="border-radius: 1.6em" alt="Hack Club Icon">
+          <div>
+            <h2 class="inner-header">Code-Alongs (<a href="https://github.com/hlsshackclub/paint-game">Paint
+                Game,
+              </a><a href="https://github.com/hlsshackclub/RockPaperScissors">Rock Paper Scissors</a>, <a
+                href="https://github.com/hlsshackclub/Tic-Tac-Toe-Better">Tic Tac Toe</a>)
+              <project-icon types="solo"></project-icon>
+            </h2>
+            <h3 class="inner-subheader">Python | Tkinter, EZDrawing</h3>
+            <p>Three code-alongs designed to teach beginners in the HLSS Hack Club. Were all executed to various
+              levels of success: Tic Tac Toe was quite successful, Paint Game never happened, and Rock Paper
+              Scissors was in between. Turns out running a coding club is quite difficult when few people are
+              interested in coding...
+            </p>
+            <br>
+          </div>
         </div>
-      </div>
-      <div class="project">
-        <div>
-          <h2 class="inner-header"><a href="https://github.com/hlsshackclub/ezdrawing">EZDrawing:</a>
-            <project-icon types="solo"></project-icon>
-          </h2>
-          <h3 class="inner-subheader">Python | Pygame, Tkinter</h3>
-          <p>A drawing library designed to be as simple as possible and use very few advanced programming
-            concepts. Was originally intended to be used in a beginner programming activity with the HLSS
-            Hack Club (Paint Game), but unfortuantely that never came to fruition.
-          </p>
-          <br>
+        <div class="project">
+          <div>
+            <h2 class="inner-header"><a href="https://github.com/hlsshackclub/ezdrawing">EZDrawing:</a>
+              <project-icon types="solo"></project-icon>
+            </h2>
+            <h3 class="inner-subheader">Python | Pygame, Tkinter</h3>
+            <p>A drawing library designed to be as simple as possible and use very few advanced programming
+              concepts. Was originally intended to be used in a beginner programming activity with the HLSS
+              Hack Club (Paint Game), but unfortuantely that never came to fruition.
+            </p>
+            <br>
+          </div>
         </div>
-      </div>
-      <div class="project">
-        <div>
-          <h2 class="inner-header"><a href="https://github.com/LiamCWest/Poof">Poof:</a>
-            <project-icon types="game major"></project-icon>
-          </h2>
-          <h3 class="inner-subheader">Python | Pygame</h3>
-          <p>A rhythm game made with two of my friends for our Grade 12 Computer Science Summative. Might come
-            back to this one at some point, it's a pretty cool concept!
-          </p>
-          <br>
+        <div class="project">
+          <div>
+            <h2 class="inner-header"><a href="https://github.com/LiamCWest/Poof">Poof:</a>
+              <project-icon types="game major"></project-icon>
+            </h2>
+            <h3 class="inner-subheader">Python | Pygame</h3>
+            <p>A rhythm game made with two of my friends for our Grade 12 Computer Science Summative. Might come
+              back to this one at some point, it's a pretty cool concept!
+            </p>
+            <br>
+          </div>
         </div>
-      </div>
-      <div class="project">
-        <img src="drunkchess.webp" style="border-radius: 16px;">
-        <div>
-          <h2 class="inner-header"><a href="https://github.com/Empika1/DrunkChess">Drunk Chess:</a>
-            <project-icon types="game major solo"></project-icon>
-          </h2>
-          <h3 class="inner-subheader">GDScript, GDShader | Godot Engine</h3>
-          <p>A chess variant where you can move pieces to any point on the board, not just the center of
-            squares. In other words, a continuous generalization of chess. My first good published game,
-            after many years of starting overly ambitious projects and giving up midway.<br>
-            Play it on <a href="https://empika1.itch.io/drunk-chess">itch.io</a> here!
-          </p>
-          <br>
+        <div class="project">
+          <img src="drunkchess.webp" style="border-radius: 0.8em;" alt="Drunk Chess Title">
+          <div>
+            <h2 class="inner-header"><a href="https://github.com/Empika1/DrunkChess">Drunk Chess:</a>
+              <project-icon types="game major solo"></project-icon>
+            </h2>
+            <h3 class="inner-subheader">GDScript, GDShader | Godot Engine</h3>
+            <p>A chess variant where you can move pieces to any point on the board, not just the center of
+              squares. In other words, a continuous generalization of chess. My first good published game,
+              after many years of starting overly ambitious projects and giving up midway.<br>
+              Play it on <a href="https://empika1.itch.io/drunk-chess">itch.io</a> here!
+            </p>
+            <br>
+          </div>
         </div>
-      </div>
-      <div class="project">
-        <img src="floatingchess.webp">
-        <div>
-          <h2 class="inner-header"><a href="https://github.com/Empika1/Floating-Chess">Floating Chess:</a>
-            <project-icon types="game solo"></project-icon>
-          </h2>
-          <h3 class="inner-subheader">Java | Swing</h3>
-          <p>An earlier and much worse version of Drunk Chess. Made for my Grade 11 Computer Science
-            Summative. Apparently made before I had any clue how to organize a repository?
-          </p>
+        <div class="project">
+          <img src="floatingchess.webp" alt="Floating Chess Title">
+          <div>
+            <h2 class="inner-header"><a href="https://github.com/Empika1/Floating-Chess">Floating Chess:</a>
+              <project-icon types="game solo"></project-icon>
+            </h2>
+            <h3 class="inner-subheader">Java | Swing</h3>
+            <p>An earlier and much worse version of Drunk Chess. Made for my Grade 11 Computer Science
+              Summative. Apparently made before I had any clue how to organize a repository?
+            </p>
+          </div>
         </div>
+      </diamond-div>
+      <div class="section-header-container">
+        <h1 class="section-header">More Content Coming Soon!</h1>
+        <h2 class="subtitle">(maybe)</h1>
       </div>
-    </diamond-div>
-    <div class="section-header-container">
-      <h1 class="section-header">More Content Coming Soon!</h1>
-      <h2 class="subtitle">(maybe)</h1>
-    </div>
-    <div class="end"></div>
+      <div class="end"></div>
+    </main>
   </div>
 </body>
 
