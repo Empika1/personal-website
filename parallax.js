@@ -1,25 +1,31 @@
 const r = document.querySelector(':root');
 const b = document.body;
 
-addEventListener("load", setHeight);
-addEventListener("resize", setHeight);
+addEventListener("load", setHeight, { passive: true });
+addEventListener("resize", setHeight, { passive: true });
 function setHeight(_) {
   const height = b.scrollHeight;
   r.style.setProperty('--page-height', `${height}px`);
   setScroll();
 }
 
-let ticking = false;
-b.addEventListener("scroll", onScroll);
-function onScroll() {
-  if (!ticking) {
-    requestAnimationFrame(setScroll);
-    ticking = true;
-  }
-}
+let latestScroll = 0;
+let prevScroll = -1;
+
+b.addEventListener("scroll", () => {
+  setScroll();
+}, { passive: true });
+
 function setScroll() {
-  const scroll = b.scrollTop;
-  r.style.setProperty('--page-scroll', `-${scroll}px`);
-  ticking = false;
+  latestScroll = b.scrollTop
 }
-setHeight();
+
+function loop() {
+  if (latestScroll !== prevScroll) {
+    r.style.setProperty('--page-scroll', `-${latestScroll}px`);
+    prevScroll = latestScroll;
+  }
+  requestAnimationFrame(loop);
+}
+
+requestAnimationFrame(loop);

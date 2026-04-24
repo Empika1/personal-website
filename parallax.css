@@ -1,15 +1,10 @@
 :root {
-  --content-clouds-allowed-overlap: 1.5ch;
+  --content-clouds-allowed-overlap: 1ch;
 
   --bg-color: #00010f;
-  --wave-screen-bottom-offset: max(30vh, 150px);
-  --wave-cloud-min-spacing: 25vh;
-  --wave-content-spacing: 75px;
   --fg1-cloud-bottom-spacing: min(50vh, 400px);
   --bg2-cloud-bottom-spacing: min(35vh, 300px);
   --bg4-cloud-bottom-spacing: min(30vh, 200px);
-  --wave-fake-offset: 35px;
-  --wave-fake-offset-default: calc(var(--wave-fake-offset) / 1.75);
   --wave-tilt-offset: 5em;
   --wave-move-time: 20s;
 

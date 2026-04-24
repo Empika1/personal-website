@@ -1,6 +1,6 @@
 :root {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  --font-size: clamp(1rem, calc(1.25rem + (100vw - 1536px) / 150), 1.3rem);
+  --font-size: clamp(1rem, calc(1.25rem + (100vw - 1536px) / 150), 1.5rem);
   font-size: var(--font-size);
 
   --fg-accent-color: #ff9ef2;
@@ -109,7 +109,7 @@ h1.title {
   flex-shrink: 0;
 }
 
-h2.subtitle {
+h3.subtitle {
   font-size: 1.2em;
   font-style: italic;
   line-height: 1.1;
