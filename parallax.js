@@ -5,14 +5,21 @@ addEventListener("load", setHeight);
 addEventListener("resize", setHeight);
 function setHeight(_) {
   const height = b.scrollHeight;
-  console.log({height});
   r.style.setProperty('--page-height', `${height}px`);
+  setScroll();
 }
 
-b.addEventListener("scroll", setScroll);
-function setScroll(_) {
-  const scroll = b.scrollTop;
-  console.log({scroll});
-  r.style.setProperty('--page-scroll', `-${scroll}px`);
+let ticking = false;
+b.addEventListener("scroll", onScroll);
+function onScroll() {
+  if (!ticking) {
+    requestAnimationFrame(setScroll);
+    ticking = true;
+  }
 }
-setScroll();
+function setScroll() {
+  const scroll = b.scrollTop;
+  r.style.setProperty('--page-scroll', `-${scroll}px`);
+  ticking = false;
+}
+setHeight();
