@@ -1,6 +1,6 @@
 :root {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  --font-size: clamp(1rem, calc(1.25rem + (100vw - 1536px) / 150), 1.5rem);
+  --font-size: clamp(1rem, calc(1.25rem + (100lvw - 1536px) / 150), 1.5rem);
   font-size: var(--font-size);
 
   --fg-accent-color: #ff9ef2;
@@ -28,17 +28,17 @@
   --diamond-decal-size: 1.25em;
   --diamond-decal-color: var(--fg-accent-color);
 
-  --content-width: min(calc(100vw - 4ch), 80ch);
+  --content-width: min(calc(100lvw - 4ch), 80ch);
 }
 
 html {
-  height: 100vh;
+  height: 100lvh;
   overflow: hidden;
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100lvw;
+  height: 100lvh;
   margin: 0;
   background: #00010f;
   overflow-x: hidden;
@@ -89,7 +89,7 @@ figcaption {
 }
 
 .title-container {
-  min-height: 100vh;
+  min-height: 100lvh;
   padding-bottom: var(--section-spacing);
   padding-top: var(--section-spacing);
   display: flex;
@@ -352,7 +352,7 @@ h3.inner-subheader {
 
 .noscript {
   position: fixed;
-  width: 100vw;
+  width: 100lvw;
   margin: 0 auto;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
