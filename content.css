@@ -165,11 +165,18 @@ p.non-box {
 }
 
 @keyframes bob {
-  0%   { transform: translateY(calc(-0.4 * var(--bob-magnitude))); }
-  50%  { transform: translateY(calc(0.4 * var(--bob-magnitude))); }
-  100% { transform: translateY(calc(-0.4 * var(--bob-magnitude))); }
-}
+  0% {
+    transform: translateY(calc(-0.4 * var(--bob-magnitude)));
+  }
 
+  50% {
+    transform: translateY(calc(0.4 * var(--bob-magnitude)));
+  }
+
+  100% {
+    transform: translateY(calc(-0.4 * var(--bob-magnitude)));
+  }
+}
 
 .down-arrow {
   --sizex: 2.5em;
@@ -184,6 +191,12 @@ p.non-box {
   flex-shrink: 0;
 
   animation: bob 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .down-arrow {
+    animation: none;
+  }
 }
 
 .section-header-container {
