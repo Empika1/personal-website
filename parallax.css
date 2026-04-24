@@ -11,6 +11,7 @@
   --wave-fake-offset: 35px;
   --wave-fake-offset-default: calc(var(--wave-fake-offset) / 1.75);
   --wave-tilt-offset: 5em;
+  --wave-move-time: 20s;
 
   --page-height: 100000px;
   --page-scroll: 0px;
@@ -266,6 +267,15 @@
   background-image: url('cloudsbg2.webp')
 }
 
+@keyframes wave-move {
+  from {
+    background-position-x: 0, 0;
+  }
+  to {
+    background-position-x: var(--sizex), 0;
+  }
+}
+
 .fg3-wave {
   --sizex: 726px;
   --sizey: 91px;
@@ -277,6 +287,7 @@
   background-repeat: repeat-x, no-repeat;
   background-position: top center, top var(--sizey) center;
   background-image: url('wavefg2.webp'), linear-gradient(var(--bg-color), var(--bg-color));
+  animation: wave-move var(--wave-move-time) linear infinite;
 }
 
 /* wave offsets are chosen to look good */
@@ -292,6 +303,7 @@
   background-repeat: repeat-x, no-repeat;
   background-position: top center, top var(--sizey) center;
   background-image: url('wavefg1.webp'), linear-gradient(var(--bg-color), var(--bg-color));
+  animation: wave-move var(--wave-move-time) linear infinite;
 }
 
 .bg1-wave {
@@ -305,6 +317,7 @@
   background-repeat: repeat-x, no-repeat;
   background-position: top center, top var(--sizey) center;
   background-image: url('wavebg1.webp'), linear-gradient(var(--bg-color), var(--bg-color));
+  animation: wave-move var(--wave-move-time) linear infinite;
 }
 
 .bg3-wave {
@@ -318,4 +331,5 @@
   background-repeat: repeat-x, no-repeat;
   background-position: top center, top var(--sizey) center;
   background-image: url('wavebg2.webp'), linear-gradient(var(--bg-color), var(--bg-color));
+  animation: wave-move var(--wave-move-time) linear infinite;
 }
