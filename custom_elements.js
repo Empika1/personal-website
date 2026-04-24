@@ -6,7 +6,7 @@ class DiamondDiv extends HTMLElement {
   connectedCallback() {
     const shadow = this.attachShadow({ mode: 'open' });
     shadow.innerHTML =
-      `<link rel="stylesheet" href="styles.css">
+      `<link rel="stylesheet" href="content.css">
       <div class="box">
         <div class="diamond-decal-tl"></div>
         <div class="diamond-decal-tr"></div>
