@@ -27,7 +27,7 @@
   --diamond-decal-size: 1.25em;
   --diamond-decal-color: var(--fg-accent-color);
 
-  --content-width: min(calc(100% - 4ch), 80ch);
+  --content-width: min(calc(100vw - 4ch), 80ch);
 }
 
 html {
